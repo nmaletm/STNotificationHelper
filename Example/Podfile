@@ -1,0 +1,11 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+target 'STNotificationHelper', :exclusive => true do
+  pod "STNotificationHelper", :path => "../"
+end
+
+target 'Tests', :exclusive => true do
+  pod "STNotificationHelper", :path => "../"
+
+  
+end
