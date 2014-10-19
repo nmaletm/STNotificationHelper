@@ -10,8 +10,9 @@
 "notification.notificationTap"    = "Tap \"Notification Center\"";
 "notification.open"               = "Open iPhone Settings";
 "notification.app"                = "Select \"%@\"";
-"notification.activate"           = "Turn on Show on Lock Screen";
+"notification.activate"           = "Turn on \"%@\"";
 "notification.lockScreen"         = "Show on Lock Screen";
+"notification.allowNotifications" = "Allow Notifications";
 "notification.chooseBanner"       = "Select \"Banners\"";
 "notification.banner"             = "Banners";
 "notification.none"               = "None";

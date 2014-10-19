@@ -8,11 +8,12 @@
 
 "notification.work"               = "So funktioniert es:";
 "notification.notificationTap"    = "Tippe auf \"Benachrichtigungszentrum\"";
-"notification.open"               = "Öffne die iPhone-Einstellungen";
+"notification.open"               = "Öffne die Einstellungen";
 "notification.app"                = "Wähle \"%@\"";
-"notification.activate"           = "Anzeige auf dem Sperrbildschirm aktivieren";
+"notification.activate"           = "\"%@\" aktivieren";
 "notification.lockScreen"         = "Im Sperrbildschirm";
+"notification.allowNotifications" = "Mitteilungen erlauben";
 "notification.chooseBanner"       = "Wähle \"Banner\"";
 "notification.banner"             = "Banner";
 "notification.none"               = "Keine";
-"notification.alert"              = "Hinweis";
+"notification.alert"              = "Hinweise";

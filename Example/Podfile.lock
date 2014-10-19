@@ -12,6 +12,6 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Masonry: 35368c2ca9577ca87722c12fc52c4bad9b1c1516
-  STNotificationHelper: ca38ff27454f211a54010bfadbb0aea247eb24e6
+  STNotificationHelper: 52d6448a5dc940cc3fc8a125f182cfd322b4508c
 
 COCOAPODS: 0.34.4

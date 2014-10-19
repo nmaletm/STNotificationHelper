@@ -8,10 +8,11 @@
 
 "notification.work"               = "Såhär gör du:";
 "notification.notificationTap"    = "Tryck på \"Notiser\"";
-"notification.open"               = "Öppna iPhone Inställningar";
-"notification.app"                = "Välj \"%@\":";
-"notification.activate"           = "Aktivera Visa vid låst skärm";
+"notification.open"               = "Öppna Inställningar";
+"notification.app"                = "Välj \"%@\"";
+"notification.activate"           = "Aktivera \"%@\"";
 "notification.lockScreen"         = "Visa vid låst skärm";
+"notification.allowNotifications" = "Tillåt notiser";
 "notification.chooseBanner"       = "Välj \"Banderoller\"";
 "notification.banner"             = "Banderoller";
 "notification.none"               = "Ingen";

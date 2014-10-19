@@ -35,38 +35,19 @@ extern NSString *STNotificationLocalizedString(NSString *localizeString);
 
 
 @interface STNotificationHelperViewController : UIViewController
+@property (nonatomic,strong) UIView         *contentView;
+
 @property (nonatomic,strong) UILabel        *titleLabel;
 @property (nonatomic,strong) UILabel        *descriptionLabel;
 
 @property (nonatomic,strong) UIButton       *exitButton;
 @property (nonatomic,strong) UILabel        *doesItWorkLabel;
 
-@property (nonatomic,strong) UILabel        *numberOneLabel;
-@property (nonatomic,strong) UILabel        *numberOneDescriptionLabel;
-@property (nonatomic,strong) UIImageView    *numberOneImageView;
+/**
+ Show a view with the steps that the user has to follow to enable the push notifications again.
 
-@property (nonatomic,strong) UILabel        *numberTwoLabel;
-@property (nonatomic,strong) UILabel        *numberTwoDescriptionLabel;
-@property (nonatomic,strong) UIImageView    *numberTwoImageView;
-
-@property (nonatomic,strong) UILabel        *numberThreeLabel;
-@property (nonatomic,strong) UILabel        *numberThreeDescriptionLabel;
-@property (nonatomic,strong) UIImageView    *numberThreeImageView;
-
-
-@property (nonatomic,strong) UILabel        *numberFourLabel;
-@property (nonatomic,strong) UILabel        *numberFourDescriptionLabel;
-@property (nonatomic,strong) UIView         *numberFourDescriptionView;
-@property (nonatomic,strong) STUISwitchView *numberFourSwitchView;
-@property (nonatomic,strong) UILabel        *numberFourDescriptionLabelInDescriptionView;
-
-
-@property (nonatomic,strong) UILabel        *numberFiveLabel;
-@property (nonatomic,strong) UILabel        *numberFiveDescriptionLabel;
-@property (nonatomic,strong) UIView         *numberFiveDescriptionView;
-@property (nonatomic,strong) UILabel        *noneLabel;
-@property (nonatomic,strong) UILabel        *bannerLabel;
-@property (nonatomic,strong) UILabel        *hinweisLabel;
-
+ @param notification information about the app
+ @return The reference to the STNotificationHelperViewController
+ */
 - (id)initWithNotification:(STNotificationHelperObject*)notification;
 @end

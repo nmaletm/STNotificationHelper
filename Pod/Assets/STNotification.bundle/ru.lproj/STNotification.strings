@@ -8,10 +8,11 @@
 
 "notification.work"               = "Инструкция:";
 "notification.notificationTap"    = "Нажмите на \"Центр Уведомлений\"";
-"notification.open"               = "Откройте настройки iPhone";
+"notification.open"               = "Откройте настройки";
 "notification.app"                = "Выберите \"%@\"";
-"notification.activate"           = "Включите Показывать на экране блокировки";
-"notification.lockScreen"         = "Показывать на экране \"блокировки\"";
+"notification.activate"           = "Включите \"%@\"";
+"notification.lockScreen"         = "Показывать на экране блокировки";
+"notification.allowNotifications" = "Разрешить уведомления";
 "notification.chooseBanner"       = "Выберите Баннеры";
 "notification.banner"             = "Баннеры";
 "notification.none"               = "Нет";

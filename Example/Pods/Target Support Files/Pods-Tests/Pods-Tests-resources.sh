@@ -43,7 +43,13 @@ install_resource()
       ;;
   esac
 }
-          install_resource "../../Pod/Assets/STNotification.bundle"
+          install_resource "../../Pod/Assets/STExit.png"
+                    install_resource "../../Pod/Assets/STExit@2x.png"
+                    install_resource "../../Pod/Assets/STNotification.png"
+                    install_resource "../../Pod/Assets/STNotification@2x.png"
+                    install_resource "../../Pod/Assets/STSettings.png"
+                    install_resource "../../Pod/Assets/STSettings@2x.png"
+                    install_resource "../../Pod/Assets/STNotification.bundle"
           
 rsync -avr --copy-links --no-relative --exclude '*/.svn/*' --files-from="$RESOURCES_TO_COPY" / "${CONFIGURATION_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"
 if [[ "${ACTION}" == "install" ]]; then

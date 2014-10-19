@@ -10,8 +10,9 @@
 "notification.notificationTap"    = "Tap \Centro Notifiche\";
 "notification.open"               = "Apri Impostazioni iPhone";
 "notification.app"                = "Seleziona \"%@\"";
-"notification.activate"           = "Attiva su Blocco Schermo";
-"notification.lockScreen"         = "Mostra su Blocco Schermo";
+"notification.activate"           = "Attiva \"%@\"";
+"notification.lockScreen"         = "Vedi in Blocco Schermo";
+"notification.allowNotifications" = "Consenti notifiche";
 "notification.chooseBanner"       = "Seleziona \Banner\";
 "notification.banner"             = "Banner";
 "notification.none"               = "Nessuno";

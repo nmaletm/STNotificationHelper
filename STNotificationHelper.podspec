@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
                     Origanally a fork of MHNotificationHelper (https://github.com/mariohahn/MHNotificationHelper/), but with iOS8 support and more languages.
                        DESC
   s.homepage         = "https://github.com/nmaletm/STNotificationHelper"
-  s.screenshots      = "https://raw.githubusercontent.com/nmaletm/STNotificationHelper/master/Screenshots/screenshote-ios7.png"
+  s.screenshots      = "https://raw.githubusercontent.com/nmaletm/STNotificationHelper/master/Screenshots/screenshote-ios7.png", "https://raw.githubusercontent.com/nmaletm/STNotificationHelper/master/Screenshots/screenshote-ios8.png"
   s.license          = 'MIT'
   s.author           = { "Nestor Malet" => "nmaletm@gmail.com" }
   s.source           = { :git => "https://github.com/nmaletm/STNotificationHelper.git", :tag => s.version.to_s }
@@ -20,7 +20,7 @@ Pod::Spec.new do |s|
 
   s.source_files = 'Pod/Classes'
 
-  s.resource = "Pod/Assets/STNotification.bundle"
+  s.resource = "Pod/Assets/*"
 
   s.public_header_files = 'Pod/Classes/**/*.h'
   s.frameworks = 'UIKit'

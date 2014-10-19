@@ -25,18 +25,15 @@
 {
     [super viewDidAppear:animated];
     
-    NSString *title = @"Take advantage of MySuperApp";
-    NSString *descriptionString = @"MySuperApp is better with Push Notifications. We will spam you a lot! :)";
+    NSString *title = NSLocalizedString(@"Take advantage of MySuperApp", nil);
+    NSString *descriptionString = NSLocalizedString(@"MySuperApp is better with Push Notifications. We will spam you a lot! :)", nil);
     
     STNotificationHelperObject *notificationObject = [STNotificationHelperObject objectWithTitle:title
                                                                                      description:descriptionString
-                                                                                         appIcon:nil
+                                                                                         appIcon:[UIImage imageNamed:@"appIcon.png"]
                                                                                          appName:@"MySuperApp"];
     
     STNotificationHelperViewController *notificationHelper = [STNotificationHelperViewController.alloc initWithNotification:notificationObject];
-    
-    // If the language is not localized, you can set your own translations:
-    notificationHelper.bannerLabel.text = NSLocalizedString(@"Banner", nil);
     
     [self presentViewController:notificationHelper animated:YES completion:nil];
 }

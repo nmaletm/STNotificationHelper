@@ -8,10 +8,11 @@
 
 "notification.work"               = "Berikut caranya:";
 "notification.notificationTap"    = "Sentuh \"Pemberitahuan\"";
-"notification.open"               = "Buka Pengaturan iPhone";
+"notification.open"               = "Buka Pengaturan";
 "notification.app"                = "Pilih \"%@\":";
-"notification.activate"           = "Aktifkan Lihat saat Layar Terkunci";
+"notification.activate"           = "Aktifkan \"%@\"";
 "notification.lockScreen"         = "Lihat saat Layar Terkunci";
+"notification.allowNotifications" = "Izinkan Pemberitahuan";
 "notification.chooseBanner"       = "Pilih \"Spanduk\"";
 "notification.banner"             = "Spanduk";
 "notification.none"               = "Tidak Ada";

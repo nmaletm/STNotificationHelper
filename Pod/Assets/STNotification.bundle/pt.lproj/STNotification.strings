@@ -8,10 +8,11 @@
 
 "notification.work"               = "Procedimento:";
 "notification.notificationTap"    = "Selecione \"Central de notificações\"";
-"notification.open"               = "Abrir ajustes iPhone";
+"notification.open"               = "Abrir ajustes";
 "notification.app"                = "Selecionar \"%@\":";
-"notification.activate"           = "Ativar Ver no ecrã bloqueado";
+"notification.activate"           = "Ativar \"%@\"";
 "notification.lockScreen"         = "Ver no ecrã bloqueado";
+"notification.allowNotifications" = "Permitir notificações";
 "notification.chooseBanner"       = "Selecionar \"Faixas\"";
 "notification.banner"             = "Faixas";
 "notification.none"               = "Nenhum";

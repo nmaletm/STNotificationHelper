@@ -7,6 +7,7 @@
 Forked project from [MHNotificationHelper](https://github.com/mariohahn/MHNotificationHelper), with support for iOS8 (the instructions are different) and translation to some languages.
 
 ![alt tag](Screenshots/screenshote-ios7.png)
+![alt tag](Screenshots/screenshote-ios8.png)
 
 ## Language support
 

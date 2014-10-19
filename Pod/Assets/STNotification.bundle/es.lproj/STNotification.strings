@@ -10,8 +10,9 @@
 "notification.notificationTap"    = "Clica \"Centro de notificaciones\"";
 "notification.open"               = "Abre los Ajustes del dispositivo";
 "notification.app"                = "Selecciona \"%@\"";
-"notification.activate"           = "Activa Ver en la pantalla bloqueada";
+"notification.activate"           = "Activa \"%@\"";
 "notification.lockScreen"         = "Ver en la pantalla bloqueada";
+"notification.allowNotifications" = "Permitir notificaciones";
 "notification.chooseBanner"       = "Selecciona \"Tiras\"";
 "notification.banner"             = "Tiras";
 "notification.none"               = "Nada";

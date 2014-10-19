@@ -8,10 +8,11 @@
 
 "notification.work"               = "Voici comment faire:";
 "notification.notificationTap"    = "Tapez \"Notifications\"";
-"notification.open"               = "Ouvrez Réglages iPhone";
+"notification.open"               = "Ouvrez Réglages";
 "notification.app"                = "Sélectionnez \"%@\"";
-"notification.activate"           = "Allumez Afficher sur l'écran verrouillé";
+"notification.activate"           = "Allumez \"%@\"";
 "notification.lockScreen"         = "Afficher sur l'écran verrouillé";
+"notification.allowNotifications" = "Autoriser les notifications";
 "notification.chooseBanner"       = "Sélectionnez \"Bannières\"";
 "notification.banner"             = "Bannières";
 "notification.none"               = "Aucune";
