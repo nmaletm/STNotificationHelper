@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
                     Origanally a fork of MHNotificationHelper (https://github.com/mariohahn/MHNotificationHelper/), but with iOS8 support and more languages.
                        DESC
   s.homepage         = "https://github.com/nmaletm/STNotificationHelper"
-  # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
+  # s.screenshots     = "https://raw.githubusercontent.com/nmaletm/STNotificationHelper/master/Screenshots/screenshote-ios7.png"
   s.license          = 'MIT'
   s.author           = { "Nestor Malet" => "nmaletm@gmail.com" }
   s.source           = { :git => "https://github.com/nmaletm/STNotificationHelper.git", :tag => s.version.to_s }
