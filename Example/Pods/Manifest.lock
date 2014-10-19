@@ -1,0 +1,14 @@
+PODS:
+  - STNotificationHelper (0.1.0)
+
+DEPENDENCIES:
+  - STNotificationHelper (from `../`)
+
+EXTERNAL SOURCES:
+  STNotificationHelper:
+    :path: ../
+
+SPEC CHECKSUMS:
+  STNotificationHelper: 9ee05966ab9ce76cbb708bca5de20d91000a9536
+
+COCOAPODS: 0.34.1

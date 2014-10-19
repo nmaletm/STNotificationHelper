@@ -1,0 +1,849 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1E49B1842C31CE19B6BEE12F /* Pods-STNotificationHelper-STNotificationHelper-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA3C16AFDD185401328C5C6 /* Pods-STNotificationHelper-STNotificationHelper-dummy.m */; };
+		389FE22E22247AD07EF5E5FF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49E6C63C07FB3E29979404D0 /* Foundation.framework */; };
+		44CCA74C7A0424EAC164C569 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49E6C63C07FB3E29979404D0 /* Foundation.framework */; };
+		6539738272823E14EC500D4D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49E6C63C07FB3E29979404D0 /* Foundation.framework */; };
+		6C5B849C19F3BD4100E0B7FE /* STExit.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C5B849019F3BD4100E0B7FE /* STExit.png */; };
+		6C5B849D19F3BD4100E0B7FE /* STExit@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C5B849119F3BD4100E0B7FE /* STExit@2x.png */; };
+		6C5B849E19F3BD4100E0B7FE /* STNotification.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C5B849219F3BD4100E0B7FE /* STNotification.png */; };
+		6C5B849F19F3BD4100E0B7FE /* STNotification@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C5B849319F3BD4100E0B7FE /* STNotification@2x.png */; };
+		6C5B84A019F3BD4100E0B7FE /* STSettings.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C5B849419F3BD4100E0B7FE /* STSettings.png */; };
+		6C5B84A119F3BD4100E0B7FE /* STSettings@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C5B849519F3BD4100E0B7FE /* STSettings@2x.png */; };
+		6C5B84A219F3BD4100E0B7FE /* STNotification.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6C5B849619F3BD4100E0B7FE /* STNotification.bundle */; };
+		6C5B84A419F3BD4100E0B7FE /* STNotificationHelperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C5B849A19F3BD4100E0B7FE /* STNotificationHelperViewController.m */; };
+		890BD6E4F1EF260F04B7A3C4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49E6C63C07FB3E29979404D0 /* Foundation.framework */; };
+		B7BFC73788E0C04ABD414424 /* Pods-STNotificationHelper-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 26126AC29F06F660BD2719A6 /* Pods-STNotificationHelper-dummy.m */; };
+		CDAF584FF34A3241E721399D /* Pods-Tests-STNotificationHelper-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C93B7969A1C6D16C77DB6E97 /* Pods-Tests-STNotificationHelper-dummy.m */; };
+		E0C56D0AE67810E570F5269E /* Pods-Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 398DA57DE32EE0895CCE1F67 /* Pods-Tests-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		631FE12A98DC0D776A4D42FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6FD4B4D845CC778FB99E44F4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4B1FCC15643E5EEBFB5AEA77;
+			remoteInfo = "Pods-Tests-STNotificationHelper";
+		};
+		B33BDE6FFB2674F7AFD50529 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6FD4B4D845CC778FB99E44F4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E74EC55C6B2EDBFC7BB6403E;
+			remoteInfo = STNotificationHelper;
+		};
+		F17E2D4C077040D699581ED3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6FD4B4D845CC778FB99E44F4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E74EC55C6B2EDBFC7BB6403E;
+			remoteInfo = STNotificationHelper;
+		};
+		FB480D945FC5DBF161165F96 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6FD4B4D845CC778FB99E44F4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0A5ABE971389ACD3E52A34CB;
+			remoteInfo = "Pods-STNotificationHelper-STNotificationHelper";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		07C631BB150C01DBA438196F /* Pods-STNotificationHelper-STNotificationHelper.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-STNotificationHelper-STNotificationHelper.xcconfig"; sourceTree = "<group>"; };
+		1CF0E1DDC4027BE3C2998BB3 /* Pods-Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Tests.release.xcconfig"; sourceTree = "<group>"; };
+		2094A1EC61D7A05D6351BCB3 /* STNotificationHelper.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = STNotificationHelper.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		26126AC29F06F660BD2719A6 /* Pods-STNotificationHelper-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-STNotificationHelper-dummy.m"; sourceTree = "<group>"; };
+		2AF9790B2846E190724BA538 /* Pods-Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		30EC906E99E63E480C5C6DB0 /* Pods-Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Tests-resources.sh"; sourceTree = "<group>"; };
+		398DA57DE32EE0895CCE1F67 /* Pods-Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Tests-dummy.m"; sourceTree = "<group>"; };
+		3AA3C16AFDD185401328C5C6 /* Pods-STNotificationHelper-STNotificationHelper-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-STNotificationHelper-STNotificationHelper-dummy.m"; sourceTree = "<group>"; };
+		49E6C63C07FB3E29979404D0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		4D25F882353A48B87A725353 /* Pods-Tests-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Tests-environment.h"; sourceTree = "<group>"; };
+		508F52F6A4C448079EFFA6B6 /* Pods-STNotificationHelper-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-STNotificationHelper-environment.h"; sourceTree = "<group>"; };
+		50E22930C5D230709EB5ADE1 /* Pods-STNotificationHelper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-STNotificationHelper.release.xcconfig"; sourceTree = "<group>"; };
+		609865A0E9343896C3D7A600 /* Pods-STNotificationHelper-STNotificationHelper-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-STNotificationHelper-STNotificationHelper-prefix.pch"; sourceTree = "<group>"; };
+		65AB7571C315093BE77131AC /* Pods-STNotificationHelper-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-STNotificationHelper-acknowledgements.markdown"; sourceTree = "<group>"; };
+		6C5B849019F3BD4100E0B7FE /* STExit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = STExit.png; sourceTree = "<group>"; };
+		6C5B849119F3BD4100E0B7FE /* STExit@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "STExit@2x.png"; sourceTree = "<group>"; };
+		6C5B849219F3BD4100E0B7FE /* STNotification.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = STNotification.png; sourceTree = "<group>"; };
+		6C5B849319F3BD4100E0B7FE /* STNotification@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "STNotification@2x.png"; sourceTree = "<group>"; };
+		6C5B849419F3BD4100E0B7FE /* STSettings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = STSettings.png; sourceTree = "<group>"; };
+		6C5B849519F3BD4100E0B7FE /* STSettings@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "STSettings@2x.png"; sourceTree = "<group>"; };
+		6C5B849619F3BD4100E0B7FE /* STNotification.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = STNotification.bundle; sourceTree = "<group>"; };
+		6C5B849919F3BD4100E0B7FE /* STNotificationHelperViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STNotificationHelperViewController.h; sourceTree = "<group>"; };
+		6C5B849A19F3BD4100E0B7FE /* STNotificationHelperViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STNotificationHelperViewController.m; sourceTree = "<group>"; };
+		768A0026157FE8E4C74DC11D /* Pods-Tests-STNotificationHelper-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests-STNotificationHelper-Private.xcconfig"; path = "../Pods-Tests-STNotificationHelper/Pods-Tests-STNotificationHelper-Private.xcconfig"; sourceTree = "<group>"; };
+		81F58A95BF04957D36D6D438 /* Pods-Tests-STNotificationHelper.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests-STNotificationHelper.xcconfig"; path = "../Pods-Tests-STNotificationHelper/Pods-Tests-STNotificationHelper.xcconfig"; sourceTree = "<group>"; };
+		85E993E7AF5A9DB59F0B8F6E /* libPods-Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C1BC07A761A9EE5F66D4287 /* libPods-Tests-STNotificationHelper.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tests-STNotificationHelper.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9F15C3B10C27E4E4F976E8C /* Pods-STNotificationHelper-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-STNotificationHelper-resources.sh"; sourceTree = "<group>"; };
+		B6E3E74C47F413649933F809 /* Pods-Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		BA69A483635D9C4A6C94DC2E /* Pods-STNotificationHelper-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-STNotificationHelper-acknowledgements.plist"; sourceTree = "<group>"; };
+		BF63F9906FA9AA16CDBBBF42 /* Pods-Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		C499E362491C150D024C2844 /* Pods-STNotificationHelper-STNotificationHelper-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-STNotificationHelper-STNotificationHelper-Private.xcconfig"; sourceTree = "<group>"; };
+		C93B7969A1C6D16C77DB6E97 /* Pods-Tests-STNotificationHelper-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "Pods-Tests-STNotificationHelper-dummy.m"; path = "../Pods-Tests-STNotificationHelper/Pods-Tests-STNotificationHelper-dummy.m"; sourceTree = "<group>"; };
+		CDF370E051C42D45AE50AE51 /* libPods-STNotificationHelper.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-STNotificationHelper.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DDBDFD1E17F3A30912ACB5B2 /* Pods-Tests-STNotificationHelper-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Pods-Tests-STNotificationHelper-prefix.pch"; path = "../Pods-Tests-STNotificationHelper/Pods-Tests-STNotificationHelper-prefix.pch"; sourceTree = "<group>"; };
+		DF7548E5862AABC49B821451 /* libPods-STNotificationHelper-STNotificationHelper.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-STNotificationHelper-STNotificationHelper.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E921AB63C2730E078216B1EA /* Pods-STNotificationHelper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-STNotificationHelper.debug.xcconfig"; sourceTree = "<group>"; };
+		FA551342239E87A4ED35F25F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8A7896F4F6873537CAFAEF5E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		919688213DF95E372D560BCB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6539738272823E14EC500D4D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CAEB8943D40BAE8BF603BA23 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				890BD6E4F1EF260F04B7A3C4 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC71A561A7E8BA046A8D92BC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				389FE22E22247AD07EF5E5FF /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FCB17F63DB8BB9FBB2AFE780 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44CCA74C7A0424EAC164C569 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		189E1B2E6FE18E0EAA18BC6D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2094A1EC61D7A05D6351BCB3 /* STNotificationHelper.bundle */,
+				CDF370E051C42D45AE50AE51 /* libPods-STNotificationHelper.a */,
+				DF7548E5862AABC49B821451 /* libPods-STNotificationHelper-STNotificationHelper.a */,
+				85E993E7AF5A9DB59F0B8F6E /* libPods-Tests.a */,
+				8C1BC07A761A9EE5F66D4287 /* libPods-Tests-STNotificationHelper.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		44936E9DD82C2DAA91913DE8 /* Pods-STNotificationHelper */ = {
+			isa = PBXGroup;
+			children = (
+				65AB7571C315093BE77131AC /* Pods-STNotificationHelper-acknowledgements.markdown */,
+				BA69A483635D9C4A6C94DC2E /* Pods-STNotificationHelper-acknowledgements.plist */,
+				26126AC29F06F660BD2719A6 /* Pods-STNotificationHelper-dummy.m */,
+				508F52F6A4C448079EFFA6B6 /* Pods-STNotificationHelper-environment.h */,
+				A9F15C3B10C27E4E4F976E8C /* Pods-STNotificationHelper-resources.sh */,
+				E921AB63C2730E078216B1EA /* Pods-STNotificationHelper.debug.xcconfig */,
+				50E22930C5D230709EB5ADE1 /* Pods-STNotificationHelper.release.xcconfig */,
+			);
+			name = "Pods-STNotificationHelper";
+			path = "Target Support Files/Pods-STNotificationHelper";
+			sourceTree = "<group>";
+		};
+		5BE52692C1EFB36CC24E56A4 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				44936E9DD82C2DAA91913DE8 /* Pods-STNotificationHelper */,
+				E8B1B6008A57A4D03A9F5235 /* Pods-Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		6C5B848D19F3BD4100E0B7FE /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				6C5B848F19F3BD4100E0B7FE /* images */,
+				6C5B849619F3BD4100E0B7FE /* STNotification.bundle */,
+			);
+			name = Assets;
+			path = Pod/Assets;
+			sourceTree = "<group>";
+		};
+		6C5B848F19F3BD4100E0B7FE /* images */ = {
+			isa = PBXGroup;
+			children = (
+				6C5B849019F3BD4100E0B7FE /* STExit.png */,
+				6C5B849119F3BD4100E0B7FE /* STExit@2x.png */,
+				6C5B849219F3BD4100E0B7FE /* STNotification.png */,
+				6C5B849319F3BD4100E0B7FE /* STNotification@2x.png */,
+				6C5B849419F3BD4100E0B7FE /* STSettings.png */,
+				6C5B849519F3BD4100E0B7FE /* STSettings@2x.png */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+		6C5B849719F3BD4100E0B7FE /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				6C5B849919F3BD4100E0B7FE /* STNotificationHelperViewController.h */,
+				6C5B849A19F3BD4100E0B7FE /* STNotificationHelperViewController.m */,
+			);
+			name = Classes;
+			path = Pod/Classes;
+			sourceTree = "<group>";
+		};
+		91E1125E04516E6B7E9CD3F0 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F96E3EDB429E4B87E8496E97 /* STNotificationHelper */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		99CA90A4F72D686F3FDCD901 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				49E6C63C07FB3E29979404D0 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		E3D730F0A38BBEBD1C384058 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				99CA90A4F72D686F3FDCD901 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E7C4BC9E5A07F201CB494563 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				07C631BB150C01DBA438196F /* Pods-STNotificationHelper-STNotificationHelper.xcconfig */,
+				C499E362491C150D024C2844 /* Pods-STNotificationHelper-STNotificationHelper-Private.xcconfig */,
+				3AA3C16AFDD185401328C5C6 /* Pods-STNotificationHelper-STNotificationHelper-dummy.m */,
+				609865A0E9343896C3D7A600 /* Pods-STNotificationHelper-STNotificationHelper-prefix.pch */,
+				81F58A95BF04957D36D6D438 /* Pods-Tests-STNotificationHelper.xcconfig */,
+				768A0026157FE8E4C74DC11D /* Pods-Tests-STNotificationHelper-Private.xcconfig */,
+				C93B7969A1C6D16C77DB6E97 /* Pods-Tests-STNotificationHelper-dummy.m */,
+				DDBDFD1E17F3A30912ACB5B2 /* Pods-Tests-STNotificationHelper-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/Pods-STNotificationHelper-STNotificationHelper";
+			sourceTree = "<group>";
+		};
+		E8B1B6008A57A4D03A9F5235 /* Pods-Tests */ = {
+			isa = PBXGroup;
+			children = (
+				BF63F9906FA9AA16CDBBBF42 /* Pods-Tests-acknowledgements.markdown */,
+				B6E3E74C47F413649933F809 /* Pods-Tests-acknowledgements.plist */,
+				398DA57DE32EE0895CCE1F67 /* Pods-Tests-dummy.m */,
+				4D25F882353A48B87A725353 /* Pods-Tests-environment.h */,
+				30EC906E99E63E480C5C6DB0 /* Pods-Tests-resources.sh */,
+				2AF9790B2846E190724BA538 /* Pods-Tests.debug.xcconfig */,
+				1CF0E1DDC4027BE3C2998BB3 /* Pods-Tests.release.xcconfig */,
+			);
+			name = "Pods-Tests";
+			path = "Target Support Files/Pods-Tests";
+			sourceTree = "<group>";
+		};
+		F96E3EDB429E4B87E8496E97 /* STNotificationHelper */ = {
+			isa = PBXGroup;
+			children = (
+				6C5B848D19F3BD4100E0B7FE /* Assets */,
+				6C5B849719F3BD4100E0B7FE /* Classes */,
+				E7C4BC9E5A07F201CB494563 /* Support Files */,
+			);
+			name = STNotificationHelper;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		FD66EAFB953E7DA69393687F = {
+			isa = PBXGroup;
+			children = (
+				FA551342239E87A4ED35F25F /* Podfile */,
+				91E1125E04516E6B7E9CD3F0 /* Development Pods */,
+				E3D730F0A38BBEBD1C384058 /* Frameworks */,
+				189E1B2E6FE18E0EAA18BC6D /* Products */,
+				5BE52692C1EFB36CC24E56A4 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0A5ABE971389ACD3E52A34CB /* Pods-STNotificationHelper-STNotificationHelper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F420257B8EF846F0616AC40A /* Build configuration list for PBXNativeTarget "Pods-STNotificationHelper-STNotificationHelper" */;
+			buildPhases = (
+				0553A066B722F26031D0259A /* Sources */,
+				CAEB8943D40BAE8BF603BA23 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EBA4278EFBC7353FBEAF9293 /* PBXTargetDependency */,
+			);
+			name = "Pods-STNotificationHelper-STNotificationHelper";
+			productName = "Pods-STNotificationHelper-STNotificationHelper";
+			productReference = DF7548E5862AABC49B821451 /* libPods-STNotificationHelper-STNotificationHelper.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		0F6EFD6004B668C0BB4EEFA0 /* Pods-Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9836A6EB65F09CECC29A588B /* Build configuration list for PBXNativeTarget "Pods-Tests" */;
+			buildPhases = (
+				7B3229FA6BC5C999758FAC52 /* Sources */,
+				FCB17F63DB8BB9FBB2AFE780 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9E2EA2C3F75F4A5770448390 /* PBXTargetDependency */,
+			);
+			name = "Pods-Tests";
+			productName = "Pods-Tests";
+			productReference = 85E993E7AF5A9DB59F0B8F6E /* libPods-Tests.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		4B1FCC15643E5EEBFB5AEA77 /* Pods-Tests-STNotificationHelper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 34AB25352C331F427ED99B4D /* Build configuration list for PBXNativeTarget "Pods-Tests-STNotificationHelper" */;
+			buildPhases = (
+				A67CB62286041A9E90A1C5CF /* Sources */,
+				CC71A561A7E8BA046A8D92BC /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				72D2E106E57652EF92B3E4AD /* PBXTargetDependency */,
+			);
+			name = "Pods-Tests-STNotificationHelper";
+			productName = "Pods-Tests-STNotificationHelper";
+			productReference = 8C1BC07A761A9EE5F66D4287 /* libPods-Tests-STNotificationHelper.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		56771A9AD2499DA63DBBFB3A /* Pods-STNotificationHelper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5921A45551D88A0036385310 /* Build configuration list for PBXNativeTarget "Pods-STNotificationHelper" */;
+			buildPhases = (
+				DD794C9119C60D4124ECA091 /* Sources */,
+				919688213DF95E372D560BCB /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AA61DFD5B0AB3253B42C5E59 /* PBXTargetDependency */,
+			);
+			name = "Pods-STNotificationHelper";
+			productName = "Pods-STNotificationHelper";
+			productReference = CDF370E051C42D45AE50AE51 /* libPods-STNotificationHelper.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		E74EC55C6B2EDBFC7BB6403E /* STNotificationHelper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 956F2845238083DEA807FEB5 /* Build configuration list for PBXNativeTarget "STNotificationHelper" */;
+			buildPhases = (
+				5C98D4EA845406282033CB96 /* Sources */,
+				8A7896F4F6873537CAFAEF5E /* Frameworks */,
+				39CFD7079AD8781619F5BC3C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = STNotificationHelper;
+			productName = STNotificationHelper;
+			productReference = 2094A1EC61D7A05D6351BCB3 /* STNotificationHelper.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6FD4B4D845CC778FB99E44F4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+			};
+			buildConfigurationList = B43A7F51A5C1A1BBB0C9AB3A /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = FD66EAFB953E7DA69393687F;
+			productRefGroup = 189E1B2E6FE18E0EAA18BC6D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				56771A9AD2499DA63DBBFB3A /* Pods-STNotificationHelper */,
+				0A5ABE971389ACD3E52A34CB /* Pods-STNotificationHelper-STNotificationHelper */,
+				0F6EFD6004B668C0BB4EEFA0 /* Pods-Tests */,
+				4B1FCC15643E5EEBFB5AEA77 /* Pods-Tests-STNotificationHelper */,
+				E74EC55C6B2EDBFC7BB6403E /* STNotificationHelper */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		39CFD7079AD8781619F5BC3C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C5B849F19F3BD4100E0B7FE /* STNotification@2x.png in Resources */,
+				6C5B84A219F3BD4100E0B7FE /* STNotification.bundle in Resources */,
+				6C5B84A119F3BD4100E0B7FE /* STSettings@2x.png in Resources */,
+				6C5B849C19F3BD4100E0B7FE /* STExit.png in Resources */,
+				6C5B849E19F3BD4100E0B7FE /* STNotification.png in Resources */,
+				6C5B84A019F3BD4100E0B7FE /* STSettings.png in Resources */,
+				6C5B849D19F3BD4100E0B7FE /* STExit@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0553A066B722F26031D0259A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E49B1842C31CE19B6BEE12F /* Pods-STNotificationHelper-STNotificationHelper-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C98D4EA845406282033CB96 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C5B84A419F3BD4100E0B7FE /* STNotificationHelperViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B3229FA6BC5C999758FAC52 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E0C56D0AE67810E570F5269E /* Pods-Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A67CB62286041A9E90A1C5CF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDAF584FF34A3241E721399D /* Pods-Tests-STNotificationHelper-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD794C9119C60D4124ECA091 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7BFC73788E0C04ABD414424 /* Pods-STNotificationHelper-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		72D2E106E57652EF92B3E4AD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E74EC55C6B2EDBFC7BB6403E /* STNotificationHelper */;
+			targetProxy = B33BDE6FFB2674F7AFD50529 /* PBXContainerItemProxy */;
+		};
+		9E2EA2C3F75F4A5770448390 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4B1FCC15643E5EEBFB5AEA77 /* Pods-Tests-STNotificationHelper */;
+			targetProxy = 631FE12A98DC0D776A4D42FA /* PBXContainerItemProxy */;
+		};
+		AA61DFD5B0AB3253B42C5E59 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0A5ABE971389ACD3E52A34CB /* Pods-STNotificationHelper-STNotificationHelper */;
+			targetProxy = FB480D945FC5DBF161165F96 /* PBXContainerItemProxy */;
+		};
+		EBA4278EFBC7353FBEAF9293 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E74EC55C6B2EDBFC7BB6403E /* STNotificationHelper */;
+			targetProxy = F17E2D4C077040D699581ED3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		02E734813C820D3E712FA46D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 50E22930C5D230709EB5ADE1 /* Pods-STNotificationHelper.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				OTHER_CFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		07D2E5614D59B7A8CEF52F44 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C499E362491C150D024C2844 /* Pods-STNotificationHelper-STNotificationHelper-Private.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-STNotificationHelper-STNotificationHelper/Pods-STNotificationHelper-STNotificationHelper-prefix.pch";
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				OTHER_CFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		11776102DB97BDD53C2F1A8B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2AF9790B2846E190724BA538 /* Pods-Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		1768E8F22827EDD756C89FAF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+			};
+			name = Debug;
+		};
+		2BD97D65935882AB7ABF40D1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		300C462970D67D70C49145A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1CF0E1DDC4027BE3C2998BB3 /* Pods-Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				OTHER_CFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		485FE6BC9ABE94D54EA130A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		51AA7772A2EE9B2BB50E560A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				STRIP_INSTALLED_PRODUCT = NO;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6D1932A1E78933F96499E7C9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E921AB63C2730E078216B1EA /* Pods-STNotificationHelper.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		6E9038AB2BA34767EF9C9603 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C499E362491C150D024C2844 /* Pods-STNotificationHelper-STNotificationHelper-Private.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-STNotificationHelper-STNotificationHelper/Pods-STNotificationHelper-STNotificationHelper-prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		ABEFEFA9E3FB0210E0EDA131 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 768A0026157FE8E4C74DC11D /* Pods-Tests-STNotificationHelper-Private.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-Tests-STNotificationHelper/Pods-Tests-STNotificationHelper-prefix.pch";
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				OTHER_CFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FF2D832A2B5478BA892D3416 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 768A0026157FE8E4C74DC11D /* Pods-Tests-STNotificationHelper-Private.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-Tests-STNotificationHelper/Pods-Tests-STNotificationHelper-prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		34AB25352C331F427ED99B4D /* Build configuration list for PBXNativeTarget "Pods-Tests-STNotificationHelper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF2D832A2B5478BA892D3416 /* Debug */,
+				ABEFEFA9E3FB0210E0EDA131 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5921A45551D88A0036385310 /* Build configuration list for PBXNativeTarget "Pods-STNotificationHelper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6D1932A1E78933F96499E7C9 /* Debug */,
+				02E734813C820D3E712FA46D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		956F2845238083DEA807FEB5 /* Build configuration list for PBXNativeTarget "STNotificationHelper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				485FE6BC9ABE94D54EA130A5 /* Debug */,
+				2BD97D65935882AB7ABF40D1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9836A6EB65F09CECC29A588B /* Build configuration list for PBXNativeTarget "Pods-Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				11776102DB97BDD53C2F1A8B /* Debug */,
+				300C462970D67D70C49145A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B43A7F51A5C1A1BBB0C9AB3A /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1768E8F22827EDD756C89FAF /* Debug */,
+				51AA7772A2EE9B2BB50E560A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F420257B8EF846F0616AC40A /* Build configuration list for PBXNativeTarget "Pods-STNotificationHelper-STNotificationHelper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6E9038AB2BA34767EF9C9603 /* Debug */,
+				07D2E5614D59B7A8CEF52F44 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6FD4B4D845CC778FB99E44F4 /* Project object */;
+}
