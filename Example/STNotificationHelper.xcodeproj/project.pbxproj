@@ -17,10 +17,21 @@
 		6003F5A4195388D20070C39A /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5A2195388D20070C39A /* Main_iPad.storyboard */; };
 		6003F5A7195388D20070C39A /* STViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5A6195388D20070C39A /* STViewController.m */; };
 		6003F5A9195388D20070C39A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5A8195388D20070C39A /* Images.xcassets */; };
+		6C19560D19F42CBC007C756F /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C19560C19F42CBC007C756F /* Tests.m */; };
 		6CF2DFE219F4028700290C31 /* appIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CF2DFE019F4028700290C31 /* appIcon.png */; };
 		6CF2DFE319F4028700290C31 /* appIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CF2DFE119F4028700290C31 /* appIcon@2x.png */; };
 		78C994495E54E5FAA53CD11D /* libPods-STNotificationHelper.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A9185DA2EA68DFCBFA795D1 /* libPods-STNotificationHelper.a */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6C19560E19F42CBC007C756F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6003F582195388D10070C39A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6003F589195388D20070C39A;
+			remoteInfo = STNotificationHelper;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		2A9185DA2EA68DFCBFA795D1 /* libPods-STNotificationHelper.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-STNotificationHelper.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -53,6 +64,9 @@
 		6C19560119F42983007C756F /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = pt.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6C19560219F42989007C756F /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6C19560319F4298F007C756F /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6C19560819F42CBC007C756F /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C19560B19F42CBC007C756F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6C19560C19F42CBC007C756F /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		6CC269284FD223AC81954777 /* libPods-Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CF2DFE019F4028700290C31 /* appIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appIcon.png; sourceTree = "<group>"; };
 		6CF2DFE119F4028700290C31 /* appIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "appIcon@2x.png"; sourceTree = "<group>"; };
@@ -73,6 +87,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6C19560519F42CBC007C756F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -81,6 +102,7 @@
 			children = (
 				60FF7A9C1954A5C5007DD14C /* Podspec Metadata */,
 				6003F593195388D20070C39A /* STNotificationHelper */,
+				6C19560919F42CBC007C756F /* Tests */,
 				6003F58C195388D20070C39A /* Frameworks */,
 				6003F58B195388D20070C39A /* Products */,
 				DD9A92033E4B4D2A096D9444 /* Pods */,
@@ -91,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				6003F58A195388D20070C39A /* STNotificationHelper.app */,
+				6C19560819F42CBC007C756F /* Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -146,6 +169,23 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
+		6C19560919F42CBC007C756F /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				6C19560C19F42CBC007C756F /* Tests.m */,
+				6C19560A19F42CBC007C756F /* Supporting Files */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		6C19560A19F42CBC007C756F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6C19560B19F42CBC007C756F /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		DD9A92033E4B4D2A096D9444 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -179,6 +219,24 @@
 			productReference = 6003F58A195388D20070C39A /* STNotificationHelper.app */;
 			productType = "com.apple.product-type.application";
 		};
+		6C19560719F42CBC007C756F /* Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6C19561219F42CBC007C756F /* Build configuration list for PBXNativeTarget "Tests" */;
+			buildPhases = (
+				6C19560419F42CBC007C756F /* Sources */,
+				6C19560519F42CBC007C756F /* Frameworks */,
+				6C19560619F42CBC007C756F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6C19560F19F42CBC007C756F /* PBXTargetDependency */,
+			);
+			name = Tests;
+			productName = Tests;
+			productReference = 6C19560819F42CBC007C756F /* Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -188,6 +246,12 @@
 				CLASSPREFIX = ST;
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = Nestor;
+				TargetAttributes = {
+					6C19560719F42CBC007C756F = {
+						CreatedOnToolsVersion = 6.0.1;
+						TestTargetID = 6003F589195388D20070C39A;
+					};
+				};
 			};
 			buildConfigurationList = 6003F585195388D10070C39A /* Build configuration list for PBXProject "STNotificationHelper" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -212,6 +276,7 @@
 			projectRoot = "";
 			targets = (
 				6003F589195388D20070C39A /* STNotificationHelper */,
+				6C19560719F42CBC007C756F /* Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -227,6 +292,13 @@
 				6CF2DFE319F4028700290C31 /* appIcon@2x.png in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
 				6CF2DFE219F4028700290C31 /* appIcon.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6C19560619F42CBC007C756F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,7 +348,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6C19560419F42CBC007C756F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C19560D19F42CBC007C756F /* Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6C19560F19F42CBC007C756F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6003F589195388D20070C39A /* STNotificationHelper */;
+			targetProxy = 6C19560E19F42CBC007C756F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		6003F596195388D20070C39A /* InfoPlist.strings */ = {
@@ -415,6 +503,46 @@
 			};
 			name = Release;
 		};
+		6C19561019F42CBC007C756F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/STNotificationHelper.app/STNotificationHelper";
+			};
+			name = Debug;
+		};
+		6C19561119F42CBC007C756F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/STNotificationHelper.app/STNotificationHelper";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -435,6 +563,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		6C19561219F42CBC007C756F /* Build configuration list for PBXNativeTarget "Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6C19561019F42CBC007C756F /* Debug */,
+				6C19561119F42CBC007C756F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
