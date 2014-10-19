@@ -7,7 +7,7 @@
 //
 
 #import "STViewController.h"
-#import "STNotificationHelperViewController.h"
+#import <STNotificationHelperViewController.h>
 
 @interface STViewController ()
 
@@ -34,6 +34,8 @@
                                                                                          appName:@"MySuperApp"];
     
     STNotificationHelperViewController *notificationHelper = [STNotificationHelperViewController.alloc initWithNotification:notificationObject];
+    
+    // If the language is not localized, you can set your own translations:
     notificationHelper.bannerLabel.text = NSLocalizedString(@"Banner", nil);
     
     [self presentViewController:notificationHelper animated:YES completion:nil];
