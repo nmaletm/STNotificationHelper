@@ -16,6 +16,8 @@ Steps with iOS7 (left), and steps with iOS8 (right)
 
 en, es, de, fr, id, it, pl, pt, ru, sv.
 
+If you want to contribute and translate to another language, make me a pull request or contacte me by Twitter/Email. I will answer asap.
+
 ## Podfile
 
 ```ruby
@@ -26,16 +28,15 @@ pod 'STNotificationHelper'
 ##Usage
 
 ```objective-c
-NSString *title = @"Take advantage of MySuperApp";
-NSString *descriptionString = @"MySuperApp is better with Push Notifications. We will spam you a lot! :)";
+NSString *title = NSLocalizedString(@"Take advantage of MySuperApp", nil);
+NSString *descriptionString = NSLocalizedString(@"MySuperApp is better with Push Notifications. We will spam you a lot! :)", nil);
 
 STNotificationHelperObject *notificationObject = [STNotificationHelperObject objectWithTitle:title
-description:descriptionString
-appIcon:nil
-appName:@"MySuperApp"];
+                 description:descriptionString
+                     appIcon:[UIImage imageNamed:@"appIcon.png"]
+                     appName:@"MySuperApp"];
 
 STNotificationHelperViewController *notificationHelper = [STNotificationHelperViewController.alloc initWithNotification:notificationObject];
-notificationHelper.bannerLabel.text = NSLocalizedString(@"Banner", nil);
 
 [self presentViewController:notificationHelper animated:YES completion:nil];
 
