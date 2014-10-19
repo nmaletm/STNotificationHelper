@@ -4,6 +4,12 @@
 [![License](https://img.shields.io/cocoapods/l/STNotificationHelper.svg?style=flat)](http://cocoadocs.org/docsets/STNotificationHelper)
 [![Platform](https://img.shields.io/cocoapods/p/STNotificationHelper.svg?style=flat)](http://cocoadocs.org/docsets/STNotificationHelper)
 
+Forked project from [MHNotificationHelper](https://github.com/mariohahn/MHNotificationHelper), with support for iOS8 (the instructions are different) and translation to some languages.
+
+## Language support
+
+en, es, de, fr, id, it, pl, pt, ru, sv.
+
 ## Podfile
 
 ```ruby
@@ -14,15 +20,15 @@ pod 'STNotificationHelper'
 ##Usage
 
 ```objective-c
-NSString *title = @"Benachrichtungen aktivieren";
-NSString *descriptionString = @"Um die Notificationen verwenden zu können müssen sie die Banachrichtungen aktivieren.";
+NSString *title = @"Take advantage of MySuperApp";
+NSString *descriptionString = @"MySuperApp is better with Push Notifications. We will spam you a lot! :)";
 
-MHNotificationHelperObject *notificationObject = [MHNotificationHelperObject objectWithTitle:title
+STNotificationHelperObject *notificationObject = [STNotificationHelperObject objectWithTitle:title
 description:descriptionString
 appIcon:nil
-appName:@"meine App"];
+appName:@"MySuperApp"];
 
-MHNotificationHelperViewController *notificationHelper = [MHNotificationHelperViewController.alloc initWithNotification:notificationObject];
+STNotificationHelperViewController *notificationHelper = [STNotificationHelperViewController.alloc initWithNotification:notificationObject];
 notificationHelper.bannerLabel.text = NSLocalizedString(@"Banner", nil);
 
 [self presentViewController:notificationHelper animated:YES completion:nil];
@@ -31,8 +37,8 @@ notificationHelper.bannerLabel.text = NSLocalizedString(@"Banner", nil);
 ```
 ## Authors
 
-Mario Hahn, https://github.com/mariohahn
-Nestor, https://github.com/nmaletm
+* Mario Hahn, https://github.com/mariohahn (author of the original forked Pod)
+* Nestor, https://github.com/nmaletm
 
 ## License
 

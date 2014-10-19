@@ -110,7 +110,7 @@ NSString *STNotificationLocalizedString(NSString *localizeString) {
         _exitButton = UIButton.new;
         [self.exitButton addTarget:self action:@selector(exitButtonAction) forControlEvents:UIControlEventTouchUpInside];
         self.exitButton.tintColor = UIColor.lightGrayColor;
-        [self.exitButton setImage:[[UIImage imageNamed:@"STExit"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
+        [self.exitButton setImage:[[UIImage imageNamed:@"STExit" inBundle:STNotificationBundle() compatibleWithTraitCollection:nil] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
         [self.view addSubview:self.exitButton];
         
         [self.exitButton mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -171,7 +171,7 @@ NSString *STNotificationLocalizedString(NSString *localizeString) {
         }];
         
         _numberOneImageView = UIImageView.new;
-        self.numberOneImageView.image = [[UIImage imageNamed:@"STSettings"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+        self.numberOneImageView.image = [[UIImage imageNamed:@"STSettings" inBundle:STNotificationBundle() compatibleWithTraitCollection:nil] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
         [self.view addSubview:self.numberOneImageView];
         
         [self.numberOneImageView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -204,7 +204,7 @@ NSString *STNotificationLocalizedString(NSString *localizeString) {
         }];
         
         _numberTwoImageView = UIImageView.new;
-        self.numberTwoImageView.image = [[UIImage imageNamed:@"STNotification"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+        self.numberTwoImageView.image = [[UIImage imageNamed:@"STNotification" inBundle:STNotificationBundle() compatibleWithTraitCollection:nil] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
         [self.view addSubview:self.numberTwoImageView];
         
         [self.numberTwoImageView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -248,7 +248,8 @@ NSString *STNotificationLocalizedString(NSString *localizeString) {
         
         _numberThreeDescriptionLabel = UILabel.new;
         self.numberThreeDescriptionLabel.textColor = UIColor.whiteColor;
-        self.numberThreeDescriptionLabel.text = [NSString stringWithFormat:STNotificationLocalizedString(@"notification.chooseBanner"),notification.appName];
+        //self.numberThreeDescriptionLabel.text = [NSString stringWithFormat:STNotificationLocalizedString(@"notification.chooseBanner"),notification.appName];
+        self.numberThreeDescriptionLabel.text = STNotificationLocalizedString(@"notification.chooseBanner");
         self.numberThreeDescriptionLabel.numberOfLines = 2;
         self.numberThreeDescriptionLabel.font = [UIFont boldSystemFontOfSize:15];
         [self.view addSubview:self.numberThreeDescriptionLabel];

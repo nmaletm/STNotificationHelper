@@ -1,14 +1,17 @@
 PODS:
-  - STNotificationHelper (0.1.0)
+  - Masonry (0.5.3)
+  - STNotificationHelper (1.0.0):
+    - Masonry
 
 DEPENDENCIES:
-  - STNotificationHelper (from `../`)
+  - STNotificationHelper (from `../STNotificationHelper.podspec`)
 
 EXTERNAL SOURCES:
   STNotificationHelper:
-    :path: ../
+    :path: ../STNotificationHelper.podspec
 
 SPEC CHECKSUMS:
-  STNotificationHelper: 9ee05966ab9ce76cbb708bca5de20d91000a9536
+  Masonry: 35368c2ca9577ca87722c12fc52c4bad9b1c1516
+  STNotificationHelper: a55871e001a53d20a13a415963535fa7f09ac36b
 
-COCOAPODS: 0.34.1
+COCOAPODS: 0.34.4
