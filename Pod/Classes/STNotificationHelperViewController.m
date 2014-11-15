@@ -27,7 +27,8 @@ NSBundle *STNotificationBundle(void) {
 void STNotificationCustomLocalizationBlock(NSString *(^customLocalizationBlock)(NSString *stringToLocalize)){
     CustomLocalizationBlock = customLocalizationBlock;
 }
-NSString *STNotificationLocalizedString(NSString *localizeString) {
+NSString *STNotificationLocalizedString(NSString *localizeString)
+{
     if (CustomLocalizationBlock) {
         NSString *string = CustomLocalizationBlock(localizeString);
         if (string) {
@@ -42,7 +43,8 @@ NSString *STNotificationLocalizedString(NSString *localizeString) {
 - (instancetype)initWithTitle:(NSString*)title
                   description:(NSString*)notificationDescription
                       appIcon:(UIImage*)appIcon
-                      appName:(NSString*)appname{
+                      appName:(NSString*)appname
+{
     self = [super init];
     if (!self)
         return nil;
@@ -56,9 +58,21 @@ NSString *STNotificationLocalizedString(NSString *localizeString) {
 + (instancetype)objectWithTitle:(NSString*)title
                     description:(NSString*)notificationDescription
                         appIcon:(UIImage*)appIcon
-                        appName:(NSString*)appname{
+                        appName:(NSString*)appname
+{
     return [self.class.alloc initWithTitle:title description:notificationDescription appIcon:appIcon appName:appname];
 }
+
++ (instancetype)objectWithTitle:(NSString*)title
+                    description:(NSString*)notificationDescription
+{
+    UIImage *appIcon = [UIImage imageNamed: [[[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleIconFiles"] objectAtIndex:0]];
+    NSString *appName = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleDisplayName"];
+
+    return [self.class.alloc initWithTitle:title description:notificationDescription appIcon:appIcon appName:appName];
+}
+
+
 @end
 
 @interface STUISwitchView ()
@@ -95,7 +109,10 @@ NSString *STNotificationLocalizedString(NSString *localizeString) {
 
 @end
 
-@interface STNotificationHelperViewController ()
+@interface STNotificationHelperViewController (){
+    UIView *contentView;
+}
+
 @end
 
 @implementation STNotificationHelperViewController
@@ -115,71 +132,71 @@ NSString *STNotificationLocalizedString(NSString *localizeString) {
             make.edges.mas_equalTo(self.view);
         }];
         
-        self.contentView = UIView.new;
-        [scrollView addSubview:self.contentView];
+        contentView = UIView.new;
+        [scrollView addSubview:contentView];
         
-        [self.contentView mas_makeConstraints:^(MASConstraintMaker *make) {
+        [contentView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.edges.mas_equalTo(scrollView);
             make.width.mas_equalTo(scrollView);
         }];
         
-        _exitButton = UIButton.new;
-        [self.exitButton addTarget:self action:@selector(exitButtonAction) forControlEvents:UIControlEventTouchUpInside];
-        self.exitButton.tintColor = UIColor.lightGrayColor;
-        self.exitButton.layer.cornerRadius = 35;
-        self.exitButton.backgroundColor = UIColor.blackColor;
-        [self.exitButton setImage:[[UIImage imageNamed:@"STExit"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
-        [self.view addSubview:self.exitButton];
+        UIButton *exitButton = UIButton.new;
+        [exitButton addTarget:self action:@selector(exitButtonAction) forControlEvents:UIControlEventTouchUpInside];
+        exitButton.tintColor = UIColor.lightGrayColor;
+        exitButton.layer.cornerRadius = 35;
+        exitButton.backgroundColor = UIColor.blackColor;
+        [exitButton setImage:[[UIImage imageNamed:@"STExit"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
+        [self.view addSubview:exitButton];
         
-        [self.exitButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        [exitButton mas_makeConstraints:^(MASConstraintMaker *make) {
             make.right.mas_equalTo(self.view.mas_right).with.offset(-5);
             make.top.mas_equalTo(self.view.mas_top).with.offset(15);
             make.size.mas_equalTo(CGSizeMake(40, 40));
         }];
         
-        _titleLabel = UILabel.new;
-        self.titleLabel.numberOfLines = 2;
-        self.titleLabel.text = notification.title;
-        self.titleLabel.textAlignment = NSTextAlignmentCenter;
-        self.titleLabel.textColor = UIColor.whiteColor;
-        self.titleLabel.font = [UIFont boldSystemFontOfSize:20];
-        [self.contentView addSubview:self.titleLabel];
+        UILabel *titleLabel = UILabel.new;
+        titleLabel.numberOfLines = 2;
+        titleLabel.text = notification.title;
+        titleLabel.textAlignment = NSTextAlignmentCenter;
+        titleLabel.textColor = UIColor.whiteColor;
+        titleLabel.font = [UIFont boldSystemFontOfSize:20];
+        [contentView addSubview:titleLabel];
         
-        [self.titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.mas_equalTo(self.contentView.mas_left).with.offset(20);
-            make.right.mas_equalTo(self.contentView.mas_right).with.offset(-20);
-            make.top.mas_equalTo(self.contentView.mas_top).with.offset(60);
+        [titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.mas_equalTo(contentView.mas_left).with.offset(20);
+            make.right.mas_equalTo(contentView.mas_right).with.offset(-20);
+            make.top.mas_equalTo(contentView.mas_top).with.offset(60);
         }];
         
-        _descriptionLabel = UILabel.new;
-        self.descriptionLabel.text = notification.notifciationDescription;
-        self.descriptionLabel.numberOfLines = MAXFLOAT;
-        self.descriptionLabel.textColor = UIColor.lightGrayColor;
-        self.descriptionLabel.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:15];
-        self.descriptionLabel.textAlignment = NSTextAlignmentCenter;
-        [self.contentView addSubview:self.descriptionLabel];
+        UILabel *descriptionLabel = UILabel.new;
+        descriptionLabel.text = notification.notifciationDescription;
+        descriptionLabel.numberOfLines = MAXFLOAT;
+        descriptionLabel.textColor = UIColor.lightGrayColor;
+        descriptionLabel.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:15];
+        descriptionLabel.textAlignment = NSTextAlignmentCenter;
+        [contentView addSubview:descriptionLabel];
         
-        [self.descriptionLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.mas_equalTo(self.contentView.mas_left).with.offset(10);
-            make.right.mas_equalTo(self.contentView.mas_right).with.offset(-10);
-            make.top.mas_equalTo(self.titleLabel.mas_bottom).with.offset(kPaddingBetweenLabels-8);
+        [descriptionLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.mas_equalTo(contentView.mas_left).with.offset(10);
+            make.right.mas_equalTo(contentView.mas_right).with.offset(-10);
+            make.top.mas_equalTo(titleLabel.mas_bottom).with.offset(kPaddingBetweenLabels-8);
         }];
         
-        _doesItWorkLabel = UILabel.new;
-        self.doesItWorkLabel.textColor = UIColor.whiteColor;
-        self.doesItWorkLabel.text = STNotificationLocalizedString(@"notification.work");
-        [self.doesItWorkLabel setAdjustsFontSizeToFitWidth:YES];
-        self.doesItWorkLabel.font = [UIFont boldSystemFontOfSize:15];
-        [self.contentView addSubview:self.doesItWorkLabel];
+        UILabel *doesItWorkLabel = UILabel.new;
+        doesItWorkLabel.textColor = UIColor.whiteColor;
+        doesItWorkLabel.text = STNotificationLocalizedString(@"notification.work");
+        [doesItWorkLabel setAdjustsFontSizeToFitWidth:YES];
+        doesItWorkLabel.font = [UIFont boldSystemFontOfSize:15];
+        [contentView addSubview:doesItWorkLabel];
         
-        [self.doesItWorkLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.mas_equalTo(self.contentView.mas_left).with.offset(10);
-            make.right.mas_equalTo(self.contentView.mas_right).with.offset(-10);
-            make.top.mas_equalTo(self.descriptionLabel.mas_bottom).with.offset(kPaddingBetweenLabels-8);
+        [doesItWorkLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.mas_equalTo(contentView.mas_left).with.offset(10);
+            make.right.mas_equalTo(contentView.mas_right).with.offset(-10);
+            make.top.mas_equalTo(descriptionLabel.mas_bottom).with.offset(kPaddingBetweenLabels-8);
         }];
         
         
-        UIView *currentStep = self.doesItWorkLabel;
+        UIView *currentStep = doesItWorkLabel;
         int currentPositionStep = 1;
         
         if ([self isiOS7OrLower]) {
@@ -197,7 +214,7 @@ NSString *STNotificationLocalizedString(NSString *localizeString) {
         currentStep = [self addTurnOnLockScreen:currentPositionStep++ insertUnder:currentStep];
         currentStep = [self addSelectionTypeAtPosition:currentPositionStep++ insertUnder:currentStep];
    
-        [self.contentView mas_makeConstraints:^(MASConstraintMaker *make) {
+        [contentView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.bottom.mas_equalTo(currentStep.mas_bottom).with.offset(kPaddingBetweenViews);
         }];
     }
@@ -238,11 +255,11 @@ NSString *STNotificationLocalizedString(NSString *localizeString) {
     
     UILabel *numberLabel = UILabel.new;
     numberLabel.text = [NSString stringWithFormat:@"%d.", position];
-    [self.contentView addSubview:numberLabel];
+    [contentView addSubview:numberLabel];
     
     [numberLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.mas_equalTo(self.contentView.mas_left).with.offset(10);
-        make.right.mas_equalTo(self.contentView.mas_right).with.offset(-10);
+        make.left.mas_equalTo(contentView.mas_left).with.offset(10);
+        make.right.mas_equalTo(contentView.mas_right).with.offset(-10);
         make.top.mas_equalTo(currentStep.mas_bottom).with.offset(kPaddingBetweenLabels);
     }];
     [self numberAppearanceForLables:@[numberLabel]];
@@ -250,11 +267,11 @@ NSString *STNotificationLocalizedString(NSString *localizeString) {
     UIView *descriptionView = UIView.new;
     descriptionView.layer.cornerRadius = 8;
     descriptionView.layer.backgroundColor = UIColor.whiteColor.CGColor;
-    [self.contentView addSubview:descriptionView];
+    [contentView addSubview:descriptionView];
     
     [descriptionView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.mas_equalTo(self.contentView.mas_left).with.offset(35);
-        make.right.mas_equalTo(self.contentView.mas_right).with.offset(-35);
+        make.left.mas_equalTo(contentView.mas_left).with.offset(35);
+        make.right.mas_equalTo(contentView.mas_right).with.offset(-35);
         make.height.mas_equalTo(35);
         make.top.mas_equalTo(currentStep.mas_bottom).with.offset(kPaddingBetweenLabels-kPaddingImageView);
     }];
@@ -289,21 +306,21 @@ NSString *STNotificationLocalizedString(NSString *localizeString) {
 {
     UILabel *numberLabel = UILabel.new;
     numberLabel.text = [NSString stringWithFormat:@"%d.", position];
-    [self.contentView addSubview:numberLabel];
+    [contentView addSubview:numberLabel];
     
     [numberLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.mas_equalTo(self.contentView.mas_left).with.offset(10);
-        make.right.mas_equalTo(self.contentView.mas_right).with.offset(-10);
+        make.left.mas_equalTo(contentView.mas_left).with.offset(10);
+        make.right.mas_equalTo(contentView.mas_right).with.offset(-10);
         make.top.mas_equalTo(currentStep.mas_bottom).with.offset(kPaddingBetweenLabels);
     }];
     [self numberAppearanceForLables:@[numberLabel]];
 
     UIImageView *numberImageView = UIImageView.new;
     numberImageView.image = image;
-    [self.contentView addSubview:numberImageView];
+    [contentView addSubview:numberImageView];
     
     [numberImageView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.mas_equalTo(self.contentView.mas_left).with.offset(35);
+        make.left.mas_equalTo(contentView.mas_left).with.offset(35);
         make.size.mas_equalTo(CGSizeMake(28, 28));
         make.top.mas_equalTo(currentStep.mas_bottom).with.offset(kPaddingBetweenLabels-kPaddingImageView);
     }];
@@ -314,11 +331,11 @@ NSString *STNotificationLocalizedString(NSString *localizeString) {
     numberDescriptionLabel.text = step;
     numberDescriptionLabel.numberOfLines = 2;
     numberDescriptionLabel.font = [UIFont boldSystemFontOfSize:15];
-    [self.contentView addSubview:numberDescriptionLabel];
+    [contentView addSubview:numberDescriptionLabel];
     
     [numberDescriptionLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.mas_equalTo(self.contentView.mas_left).with.offset(75);
-        make.right.mas_equalTo(self.contentView.mas_right).with.offset(-10);
+        make.left.mas_equalTo(contentView.mas_left).with.offset(75);
+        make.right.mas_equalTo(contentView.mas_right).with.offset(-10);
         make.top.mas_equalTo(currentStep.mas_bottom).with.offset(kPaddingBetweenLabels);
     }];
     
@@ -351,11 +368,11 @@ NSString *STNotificationLocalizedString(NSString *localizeString) {
 {
     UILabel *numberLabel = UILabel.new;
     numberLabel.text = [NSString stringWithFormat:@"%d.", position];
-    [self.contentView addSubview:numberLabel];
+    [contentView addSubview:numberLabel];
     
     [numberLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.mas_equalTo(self.contentView.mas_left).with.offset(10);
-        make.right.mas_equalTo(self.contentView.mas_right).with.offset(-10);
+        make.left.mas_equalTo(contentView.mas_left).with.offset(10);
+        make.right.mas_equalTo(contentView.mas_right).with.offset(-10);
         make.top.mas_equalTo(currentStep.mas_bottom).with.offset(kPaddingBetweenLabels);
     }];
     [self numberAppearanceForLables:@[numberLabel]];
@@ -365,11 +382,11 @@ NSString *STNotificationLocalizedString(NSString *localizeString) {
     descriptionLabel.text = [NSString stringWithFormat:STNotificationLocalizedString(@"notification.activate"),step];
     descriptionLabel.numberOfLines = 2;
     descriptionLabel.font = [UIFont boldSystemFontOfSize:15];
-    [self.contentView addSubview:descriptionLabel];
+    [contentView addSubview:descriptionLabel];
     
     [descriptionLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.mas_equalTo(self.contentView.mas_left).with.offset(35);
-        make.right.mas_equalTo(self.contentView.mas_right).with.offset(-10);
+        make.left.mas_equalTo(contentView.mas_left).with.offset(35);
+        make.right.mas_equalTo(contentView.mas_right).with.offset(-10);
         make.top.mas_equalTo(currentStep.mas_bottom).with.offset(kPaddingBetweenLabels);
     }];
     
@@ -377,11 +394,11 @@ NSString *STNotificationLocalizedString(NSString *localizeString) {
     descriptionView.layer.cornerRadius = 8;
     descriptionView.layer.borderColor = UIColor.whiteColor.CGColor;
     descriptionView.layer.borderWidth = 1;
-    [self.contentView addSubview:descriptionView];
+    [contentView addSubview:descriptionView];
     
     [descriptionView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.mas_equalTo(self.contentView.mas_left).with.offset(35);
-        make.right.mas_equalTo(self.contentView.mas_right).with.offset(-35);
+        make.left.mas_equalTo(contentView.mas_left).with.offset(35);
+        make.right.mas_equalTo(contentView.mas_right).with.offset(-35);
         make.height.mas_equalTo(35);
         make.top.mas_equalTo(descriptionLabel.mas_bottom).with.offset(kPaddingBetweenViews);
     }];
@@ -419,11 +436,11 @@ NSString *STNotificationLocalizedString(NSString *localizeString) {
 {
     UILabel *numberLabel = UILabel.new;
     numberLabel.text = [NSString stringWithFormat:@"%d.", position ];
-    [self.contentView addSubview:numberLabel];
+    [contentView addSubview:numberLabel];
     
     [numberLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.mas_equalTo(self.contentView.mas_left).with.offset(10);
-        make.right.mas_equalTo(self.contentView.mas_right).with.offset(-10);
+        make.left.mas_equalTo(contentView.mas_left).with.offset(10);
+        make.right.mas_equalTo(contentView.mas_right).with.offset(-10);
         make.top.mas_equalTo(currentStep.mas_bottom).with.offset(kPaddingBetweenLabels/2);
     }];
     
@@ -432,11 +449,11 @@ NSString *STNotificationLocalizedString(NSString *localizeString) {
     descriptionLabel.text = STNotificationLocalizedString(@"notification.chooseBanner");
     descriptionLabel.numberOfLines = 2;
     descriptionLabel.font = [UIFont boldSystemFontOfSize:15];
-    [self.contentView addSubview:descriptionLabel];
+    [contentView addSubview:descriptionLabel];
     
     [descriptionLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.mas_equalTo(self.contentView.mas_left).with.offset(35);
-        make.right.mas_equalTo(self.contentView.mas_right).with.offset(-10);
+        make.left.mas_equalTo(contentView.mas_left).with.offset(35);
+        make.right.mas_equalTo(contentView.mas_right).with.offset(-10);
         make.top.mas_equalTo(currentStep.mas_bottom).with.offset(kPaddingBetweenLabels/2);
     }];
     
@@ -444,16 +461,16 @@ NSString *STNotificationLocalizedString(NSString *localizeString) {
     descriptionView.layer.cornerRadius = 8;
     descriptionView.layer.borderColor = [UIColor colorWithWhite:1 alpha:0.5].CGColor;
     descriptionView.layer.borderWidth = 1;
-    [self.contentView addSubview:descriptionView];
+    [contentView addSubview:descriptionView];
     
     [descriptionView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.mas_equalTo(self.contentView.mas_left).with.offset(35);
-        make.right.mas_equalTo(self.contentView.mas_right).with.offset(-35);
+        make.left.mas_equalTo(contentView.mas_left).with.offset(35);
+        make.right.mas_equalTo(contentView.mas_right).with.offset(-35);
         make.height.mas_equalTo(35);
         make.top.mas_equalTo(descriptionLabel.mas_bottom).with.offset(kPaddingBetweenViews);
     }];
     
-    [self.contentView layoutIfNeeded];
+    [contentView layoutIfNeeded];
     
     UILabel *noneLabel = UILabel.new;
     noneLabel.textColor = UIColor.lightGrayColor;

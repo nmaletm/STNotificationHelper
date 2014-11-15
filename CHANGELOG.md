@@ -1,3 +1,9 @@
+## 1.1.2
+
+### Documentation
+* New init method with only the title and description (the app name and app icon is set from the app description bundle).
+* All the public methods and public variables are now documentated and are more simple now.
+
 ## 1.1.1
 
 ### iOS8 support

@@ -20,26 +20,27 @@ en, es, de, fr, id, it, pl, pt, ru, sv.
 
 If you want to contribute and translate to another language, make me a pull request or contacte me by [Twitter](https://twitter.com/NestorMalet) / [Email](http://www.nestor.cat/contact). I will answer asap.
 
-## Podfile
+## Installation
 
+Is very easy to add this library to your project using CocoaPods, you must add this line to your Podfile, and then make `pod install`.
 ```ruby
-platform :ios, '6.0'
 pod 'STNotificationHelper'
 ```
 
 ##Usage
+First you have to include the library to your code:
+
+```objective-c
+#import <STNotificationHelperViewController.h>
+```
+
+And then add this code to show the view controller helper:
 
 ```objective-c
 NSString *title = NSLocalizedString(@"Take advantage of MySuperApp", nil);
-NSString *descriptionString = NSLocalizedString(@"MySuperApp is better with Push Notifications. We will spam you a lot! :)", nil);
+NSString *description = NSLocalizedString(@"MySuperApp is better with Push Notifications. We will spam you a lot! :)", nil);
 
-// You can set your own icon, or get it from the system
-UIImage *icon = [UIImage imageNamed: [[[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleIconFiles"] objectAtIndex:0]];
-
-STNotificationHelperObject *notificationObject = [STNotificationHelperObject objectWithTitle:title
-                 description:descriptionString
-                     appIcon:icon
-                     appName:@"MySuperApp"];
+STNotificationHelperObject *notificationObject = [STNotificationHelperObject objectWithTitle:title description:description];
 
 STNotificationHelperViewController *notificationHelper = [STNotificationHelperViewController.alloc initWithNotification:notificationObject];
 
@@ -47,6 +48,29 @@ STNotificationHelperViewController *notificationHelper = [STNotificationHelperVi
 
 
 ```
+
+
+Or you can set your own app icon and app name:
+```objective-c
+NSString *title = NSLocalizedString(@"Take advantage of MySuperApp", nil);
+NSString *description = NSLocalizedString(@"MySuperApp is better with Push Notifications. We will spam you a lot! :)", nil);
+
+UIImage *icon = [UIImage imageNamed: @"myLogo.png"];
+NSString *appName = @"My app name";
+
+STNotificationHelperObject *notificationObject = [STNotificationHelperObject 
+  objectWithTitle:title
+      description:description
+          appIcon:icon
+          appName:appName];
+
+STNotificationHelperViewController *notificationHelper = [STNotificationHelperViewController.alloc initWithNotification:notificationObject];
+
+[self presentViewController:notificationHelper animated:YES completion:nil];
+
+
+```
+
 ## Authors
 
 * Mario Hahn, https://github.com/mariohahn (author of the original forked Pod)
