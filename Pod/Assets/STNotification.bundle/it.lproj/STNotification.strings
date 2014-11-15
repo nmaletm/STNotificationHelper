@@ -8,7 +8,7 @@
 
 "notification.work"               = "Ecco come:";
 "notification.notificationTap"    = "Tap \Centro Notifiche\";
-"notification.open"               = "Apri Impostazioni iPhone";
+"notification.open"               = "Apri Impostazioni";
 "notification.app"                = "Seleziona \"%@\"";
 "notification.activate"           = "Attiva \"%@\"";
 "notification.lockScreen"         = "Vedi in Blocco Schermo";

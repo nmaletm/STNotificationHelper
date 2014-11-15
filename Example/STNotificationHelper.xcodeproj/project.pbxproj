@@ -18,6 +18,7 @@
 		6003F5A7195388D20070C39A /* STViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5A6195388D20070C39A /* STViewController.m */; };
 		6003F5A9195388D20070C39A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5A8195388D20070C39A /* Images.xcassets */; };
 		6C19560D19F42CBC007C756F /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C19560C19F42CBC007C756F /* Tests.m */; };
+		6C20E2A61A176696001BEB2F /* CHANGELOG.md in Sources */ = {isa = PBXBuildFile; fileRef = 6C20E2A51A176696001BEB2F /* CHANGELOG.md */; };
 		6CF2DFE219F4028700290C31 /* appIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CF2DFE019F4028700290C31 /* appIcon.png */; };
 		6CF2DFE319F4028700290C31 /* appIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CF2DFE119F4028700290C31 /* appIcon@2x.png */; };
 		78C994495E54E5FAA53CD11D /* libPods-STNotificationHelper.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A9185DA2EA68DFCBFA795D1 /* libPods-STNotificationHelper.a */; };
@@ -67,6 +68,7 @@
 		6C19560819F42CBC007C756F /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C19560B19F42CBC007C756F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6C19560C19F42CBC007C756F /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
+		6C20E2A51A176696001BEB2F /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = CHANGELOG.md; path = ../CHANGELOG.md; sourceTree = "<group>"; };
 		6CC269284FD223AC81954777 /* libPods-Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CF2DFE019F4028700290C31 /* appIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appIcon.png; sourceTree = "<group>"; };
 		6CF2DFE119F4028700290C31 /* appIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "appIcon@2x.png"; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 		60FF7A9C1954A5C5007DD14C /* Podspec Metadata */ = {
 			isa = PBXGroup;
 			children = (
+				6C20E2A51A176696001BEB2F /* CHANGELOG.md */,
 				51F03212A5CEF8434A570D79 /* STNotificationHelper.podspec */,
 				E48F844891274E11B5C2FFC0 /* README.md */,
 				682218054A818DB11A70C312 /* LICENSE */,
@@ -345,6 +348,7 @@
 				6003F59E195388D20070C39A /* STAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* STViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
+				6C20E2A61A176696001BEB2F /* CHANGELOG.md in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -571,6 +575,7 @@
 				6C19561119F42CBC007C756F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

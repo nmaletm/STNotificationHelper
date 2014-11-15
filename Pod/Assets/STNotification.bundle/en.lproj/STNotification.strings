@@ -8,7 +8,7 @@
 
 "notification.work"               = "Here's how:";
 "notification.notificationTap"    = "Tap \"Notification Center\"";
-"notification.open"               = "Open iPhone Settings";
+"notification.open"               = "Open device Settings";
 "notification.app"                = "Select \"%@\"";
 "notification.activate"           = "Turn on \"%@\"";
 "notification.lockScreen"         = "Show on Lock Screen";

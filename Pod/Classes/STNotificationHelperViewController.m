@@ -126,6 +126,8 @@ NSString *STNotificationLocalizedString(NSString *localizeString) {
         _exitButton = UIButton.new;
         [self.exitButton addTarget:self action:@selector(exitButtonAction) forControlEvents:UIControlEventTouchUpInside];
         self.exitButton.tintColor = UIColor.lightGrayColor;
+        self.exitButton.layer.cornerRadius = 35;
+        self.exitButton.backgroundColor = UIColor.blackColor;
         [self.exitButton setImage:[[UIImage imageNamed:@"STExit"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
         [self.view addSubview:self.exitButton];
         
@@ -180,18 +182,19 @@ NSString *STNotificationLocalizedString(NSString *localizeString) {
         UIView *currentStep = self.doesItWorkLabel;
         int currentPositionStep = 1;
         
-        currentStep = [self addOpenSettingsAtPosition:currentPositionStep++ insertUnder:currentStep];
+        if ([self isiOS7OrLower]) {
+            currentStep = [self addOpenSettingsAtPosition:currentPositionStep++ insertUnder:currentStep];
+            currentStep = [self addTapNotificationCenterAtPosition:currentPositionStep++ insertUnder:currentStep];
+            currentStep = [self addSelectYourAppAtPosition:currentPositionStep++ withNotification:notification insertUnder:currentStep];
 
-        currentStep = [self addTapNotificationCenterAtPosition:currentPositionStep++ insertUnder:currentStep];
-
-        currentStep = [self addSelectBannersAtPosition:currentPositionStep++ withNotification:notification insertUnder:currentStep];
-
-        if ( ![self isiOS7OrLower]) {
+        } else {
+            currentStep = [self addGoToSettingsAtPosition:currentPositionStep++ insertUnder:currentStep];
+            currentStep = [self addTapNotificationCenterAtPosition:currentPositionStep++ insertUnder:currentStep];
             currentStep = [self addTurnOnAllowNotifications:currentPositionStep++ insertUnder:currentStep];
+
         }
-        
+
         currentStep = [self addTurnOnLockScreen:currentPositionStep++ insertUnder:currentStep];
-        
         currentStep = [self addSelectionTypeAtPosition:currentPositionStep++ insertUnder:currentStep];
    
         [self.contentView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -230,7 +233,50 @@ NSString *STNotificationLocalizedString(NSString *localizeString) {
                 insertUnder:currentStep];
 }
 
-- (UIView *)addSelectBannersAtPosition:(int)position withNotification:(STNotificationHelperObject*)notification insertUnder:(UIView *)currentStep
+- (UIView *)addGoToSettingsAtPosition:(int)position insertUnder:(UIView *)currentStep
+{
+    
+    UILabel *numberLabel = UILabel.new;
+    numberLabel.text = [NSString stringWithFormat:@"%d.", position];
+    [self.contentView addSubview:numberLabel];
+    
+    [numberLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(self.contentView.mas_left).with.offset(10);
+        make.right.mas_equalTo(self.contentView.mas_right).with.offset(-10);
+        make.top.mas_equalTo(currentStep.mas_bottom).with.offset(kPaddingBetweenLabels);
+    }];
+    [self numberAppearanceForLables:@[numberLabel]];
+    
+    UIView *descriptionView = UIView.new;
+    descriptionView.layer.cornerRadius = 8;
+    descriptionView.layer.backgroundColor = UIColor.whiteColor.CGColor;
+    [self.contentView addSubview:descriptionView];
+    
+    [descriptionView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(self.contentView.mas_left).with.offset(35);
+        make.right.mas_equalTo(self.contentView.mas_right).with.offset(-35);
+        make.height.mas_equalTo(35);
+        make.top.mas_equalTo(currentStep.mas_bottom).with.offset(kPaddingBetweenLabels-kPaddingImageView);
+    }];
+    
+    UIButton *goToSettingsButton = UIButton.new;
+    [goToSettingsButton setTitle:STNotificationLocalizedString(@"notification.open") forState:UIControlStateNormal];
+    [goToSettingsButton setTitleColor:UIColor.blackColor forState:UIControlStateNormal];
+    [goToSettingsButton addTarget:self action:@selector(goToSettings) forControlEvents:UIControlEventTouchUpInside];
+    [goToSettingsButton.titleLabel setFont:[UIFont boldSystemFontOfSize:15]];
+    [descriptionView addSubview:goToSettingsButton];
+    
+    [goToSettingsButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(descriptionView.mas_left).with.offset(0);
+        make.right.mas_equalTo(descriptionView.mas_right).with.offset(0);
+        make.top.mas_equalTo(descriptionView.mas_top).with.offset(0);
+        make.bottom.mas_equalTo(descriptionView.mas_bottom).with.offset(0);
+    }];
+    
+    return goToSettingsButton;
+}
+
+- (UIView *)addSelectYourAppAtPosition:(int)position withNotification:(STNotificationHelperObject*)notification insertUnder:(UIView *)currentStep
 {
     
     return [self addTapStep:[NSString stringWithFormat: STNotificationLocalizedString(@"notification.app"), notification.appName]
@@ -489,6 +535,12 @@ NSString *STNotificationLocalizedString(NSString *localizeString) {
         label.font = [UIFont systemFontOfSize:15];
         label.textColor = UIColor.darkGrayColor;
     }
+}
+
+-(void)goToSettings{
+    NSURL *url = [NSURL URLWithString:UIApplicationOpenSettingsURLString];
+    [[UIApplication sharedApplication] openURL:url];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 -(void)exitButtonAction{

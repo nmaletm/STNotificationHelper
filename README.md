@@ -33,9 +33,12 @@ pod 'STNotificationHelper'
 NSString *title = NSLocalizedString(@"Take advantage of MySuperApp", nil);
 NSString *descriptionString = NSLocalizedString(@"MySuperApp is better with Push Notifications. We will spam you a lot! :)", nil);
 
+// You can set your own icon, or get it from the system
+UIImage *icon = [UIImage imageNamed: [[[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleIconFiles"] objectAtIndex:0]];
+
 STNotificationHelperObject *notificationObject = [STNotificationHelperObject objectWithTitle:title
                  description:descriptionString
-                     appIcon:[UIImage imageNamed:@"appIcon.png"]
+                     appIcon:icon
                      appName:@"MySuperApp"];
 
 STNotificationHelperViewController *notificationHelper = [STNotificationHelperViewController.alloc initWithNotification:notificationObject];
