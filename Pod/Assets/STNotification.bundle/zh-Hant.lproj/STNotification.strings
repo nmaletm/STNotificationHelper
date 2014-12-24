@@ -1,0 +1,19 @@
+/* 
+  Localizable.strings
+  MHNotification
+
+  Created by Mario Hahn on 17.02.14.
+  Copyright (c) 2014 Mario Hahn. All rights reserved.
+*/
+
+"notification.work"               = "如何設定:";
+"notification.notificationTap"    = "點選 \"通知\"";
+"notification.open"               = "開啟 iPhone 設定";
+"notification.app"                = "選擇 \"%@\"";
+"notification.activate"           = "開啟 \"%@\"";
+"notification.lockScreen"         = "在鎖定畫面中顯示提示";
+"notification.allowNotifications" = "允許通知";
+"notification.chooseBanner"       = "選擇 \"橫幅\"";
+"notification.banner"             = "橫幅";
+"notification.none"               = "無";
+"notification.alert"              = "提示";
