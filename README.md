@@ -15,7 +15,7 @@ Steps with iOS7 (left), and steps with iOS8 (right)
 ## Language support
 
 ```
-en, es, de, fr, id, it, pl, pt, ru, sv.
+en, es, de, fr, id, it, pl, pt, ru, sv, zh-Hant.
 ```
 
 If you want to contribute and translate to another language, make me a pull request or contacte me by [Twitter](https://twitter.com/NestorMalet) / [Email](http://www.nestor.cat/contact). I will answer asap.
