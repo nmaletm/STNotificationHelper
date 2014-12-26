@@ -1,8 +1,10 @@
 # STNotificationHelper
 
+[![Build Status](https://travis-ci.org/nmaletm/STNotificationHelper.svg?branch=master)](https://travis-ci.org/nmaletm/STNotificationHelper)
 [![Version](https://img.shields.io/cocoapods/v/STNotificationHelper.svg?style=flat)](http://cocoadocs.org/docsets/STNotificationHelper)
 [![License](https://img.shields.io/cocoapods/l/STNotificationHelper.svg?style=flat)](http://cocoadocs.org/docsets/STNotificationHelper)
 [![Platform](https://img.shields.io/cocoapods/p/STNotificationHelper.svg?style=flat)](http://cocoadocs.org/docsets/STNotificationHelper)
+
 
 Forked project from [MHNotificationHelper](https://github.com/mariohahn/MHNotificationHelper), with support for iOS8 (the instructions are different) and translation to some languages.
 
@@ -15,7 +17,7 @@ Steps with iOS7 (left), and steps with iOS8 (right)
 ## Language support
 
 ```
-en, es, de, fr, id, it, pl, pt, ru, sv, zh-Hant.
+ca, de, en, es, fr, id, it, pl, pt, ru, sv, zh-Hant
 ```
 
 If you want to contribute and translate to another language, make me a pull request or contacte me by [Twitter](https://twitter.com/NestorMalet) / [Email](http://www.nestor.cat/contact). I will answer asap.
@@ -74,7 +76,12 @@ STNotificationHelperViewController *notificationHelper = [STNotificationHelperVi
 ## Authors
 
 * Mario Hahn, https://github.com/mariohahn (author of the original forked Pod)
-* Nestor, https://github.com/nmaletm
+* Néstor Malet, http://www.nestor.cat
+* Retso Huang, https://github.com/retsohuang (traditional chinese support).
+
+## ChangeLog
+
+You can see all the change log at [ChangeLog](CHANGELOG.md).
 
 ## License
 

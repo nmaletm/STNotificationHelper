@@ -197,7 +197,7 @@ NSString *STNotificationLocalizedString(NSString *localizeString)
         
         
         UIView *currentStep = doesItWorkLabel;
-        int currentPositionStep = 1;
+        NSInteger currentPositionStep = 1;
         
         if ([self isiOS7OrLower]) {
             currentStep = [self addOpenSettingsAtPosition:currentPositionStep++ insertUnder:currentStep];
@@ -223,7 +223,7 @@ NSString *STNotificationLocalizedString(NSString *localizeString)
 
 #pragma mark - Tap Steps
 
--(UIView *)addTapStep:(NSString *)step withIcon:(NSString*)icon atPosition:(int)position insertUnder:(UIView *)currentStep
+-(UIView *)addTapStep:(NSString *)step withIcon:(NSString*)icon atPosition:(NSInteger)position insertUnder:(UIView *)currentStep
 {
     UIImage *image = [UIImage imageNamed:icon];
     image = [image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
@@ -231,7 +231,7 @@ NSString *STNotificationLocalizedString(NSString *localizeString)
     return [self addTapStep:step withImage:image atPosition:position insertUnder:currentStep];
 }
 
--(UIView *)addOpenSettingsAtPosition:(int)position insertUnder:(UIView *)currentStep
+-(UIView *)addOpenSettingsAtPosition:(NSInteger)position insertUnder:(UIView *)currentStep
 {
     
     
@@ -241,7 +241,7 @@ NSString *STNotificationLocalizedString(NSString *localizeString)
                 insertUnder:currentStep];
 }
 
-- (UIView *)addTapNotificationCenterAtPosition:(int)position insertUnder:(UIView *)currentStep
+- (UIView *)addTapNotificationCenterAtPosition:(NSInteger)position insertUnder:(UIView *)currentStep
 {
     
     return [self addTapStep:STNotificationLocalizedString(@"notification.notificationTap")
@@ -250,11 +250,11 @@ NSString *STNotificationLocalizedString(NSString *localizeString)
                 insertUnder:currentStep];
 }
 
-- (UIView *)addGoToSettingsAtPosition:(int)position insertUnder:(UIView *)currentStep
+- (UIView *)addGoToSettingsAtPosition:(NSInteger)position insertUnder:(UIView *)currentStep
 {
     
     UILabel *numberLabel = UILabel.new;
-    numberLabel.text = [NSString stringWithFormat:@"%d.", position];
+    numberLabel.text = [NSString stringWithFormat:@"%ld.", (long)position];
     [contentView addSubview:numberLabel];
     
     [numberLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -293,7 +293,7 @@ NSString *STNotificationLocalizedString(NSString *localizeString)
     return goToSettingsButton;
 }
 
-- (UIView *)addSelectYourAppAtPosition:(int)position withNotification:(STNotificationHelperObject*)notification insertUnder:(UIView *)currentStep
+- (UIView *)addSelectYourAppAtPosition:(NSInteger)position withNotification:(STNotificationHelperObject*)notification insertUnder:(UIView *)currentStep
 {
     
     return [self addTapStep:[NSString stringWithFormat: STNotificationLocalizedString(@"notification.app"), notification.appName]
@@ -302,10 +302,10 @@ NSString *STNotificationLocalizedString(NSString *localizeString)
                 insertUnder:currentStep];
 }
 
--(UIView *)addTapStep:(NSString *)step withImage:(UIImage *)image atPosition:(int)position insertUnder:(UIView *)currentStep
+-(UIView *)addTapStep:(NSString *)step withImage:(UIImage *)image atPosition:(NSInteger)position insertUnder:(UIView *)currentStep
 {
     UILabel *numberLabel = UILabel.new;
-    numberLabel.text = [NSString stringWithFormat:@"%d.", position];
+    numberLabel.text = [NSString stringWithFormat:@"%ld.", (long)position];
     [contentView addSubview:numberLabel];
     
     [numberLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -346,7 +346,7 @@ NSString *STNotificationLocalizedString(NSString *localizeString)
 
 #pragma mark - Switch steps
 
-- (UIView *)addTurnOnLockScreen:(int)position insertUnder:(UIView *)currentStep
+- (UIView *)addTurnOnLockScreen:(NSInteger)position insertUnder:(UIView *)currentStep
 {
     
     return [self addSwitchStep:STNotificationLocalizedString(@"notification.lockScreen")
@@ -355,7 +355,7 @@ NSString *STNotificationLocalizedString(NSString *localizeString)
 }
 
 
-- (UIView *)addTurnOnAllowNotifications:(int)position insertUnder:(UIView *)currentStep
+- (UIView *)addTurnOnAllowNotifications:(NSInteger)position insertUnder:(UIView *)currentStep
 {
     
     return [self addSwitchStep:STNotificationLocalizedString(@"notification.allowNotifications")
@@ -364,10 +364,10 @@ NSString *STNotificationLocalizedString(NSString *localizeString)
 }
 
 
--(UIView *)addSwitchStep:(NSString *)step atPosition:(int)position insertUnder:(UIView *)currentStep
+-(UIView *)addSwitchStep:(NSString *)step atPosition:(NSInteger)position insertUnder:(UIView *)currentStep
 {
     UILabel *numberLabel = UILabel.new;
-    numberLabel.text = [NSString stringWithFormat:@"%d.", position];
+    numberLabel.text = [NSString stringWithFormat:@"%ld.", (long)position];
     [contentView addSubview:numberLabel];
     
     [numberLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -432,10 +432,10 @@ NSString *STNotificationLocalizedString(NSString *localizeString)
 
 #pragma mark - SelecctionType
 
--(UIView*) addSelectionTypeAtPosition:(int)position insertUnder:(UIView *)currentStep
+-(UIView*) addSelectionTypeAtPosition:(NSInteger)position insertUnder:(UIView *)currentStep
 {
     UILabel *numberLabel = UILabel.new;
-    numberLabel.text = [NSString stringWithFormat:@"%d.", position ];
+    numberLabel.text = [NSString stringWithFormat:@"%ld.", (long)position ];
     [contentView addSubview:numberLabel];
     
     [numberLabel mas_makeConstraints:^(MASConstraintMaker *make) {

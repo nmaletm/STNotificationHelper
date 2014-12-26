@@ -1,0 +1,19 @@
+/* 
+  Localizable.strings
+  STNotification
+
+  Created by Néstor Malet.
+  Copyright (c) 2014 Néstor Malet. All rights reserved.
+*/
+
+"notification.work"               = "Segueix aquests passos:";
+"notification.notificationTap"    = "Clica \"Centre de notificacions\"";
+"notification.open"               = "Obre la configuració del dispositiu";
+"notification.app"                = "Selecciona \"%@\"";
+"notification.activate"           = "Activa \"%@\"";
+"notification.lockScreen"         = "Mostra a pantalla bloquejada";
+"notification.allowNotifications" = "Permetre notificacions";
+"notification.chooseBanner"       = "Selecciona \"Bàners\"";
+"notification.banner"             = "Bàners";
+"notification.none"               = "Cap";
+"notification.alert"              = "Avisos";

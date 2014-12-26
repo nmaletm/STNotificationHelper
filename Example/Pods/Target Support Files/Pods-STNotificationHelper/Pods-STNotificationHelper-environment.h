@@ -15,6 +15,6 @@
 // STNotificationHelper
 #define COCOAPODS_POD_AVAILABLE_STNotificationHelper
 #define COCOAPODS_VERSION_MAJOR_STNotificationHelper 1
-#define COCOAPODS_VERSION_MINOR_STNotificationHelper 0
-#define COCOAPODS_VERSION_PATCH_STNotificationHelper 0
+#define COCOAPODS_VERSION_MINOR_STNotificationHelper 1
+#define COCOAPODS_VERSION_PATCH_STNotificationHelper 2
 
