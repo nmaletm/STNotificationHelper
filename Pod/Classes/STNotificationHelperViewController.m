@@ -126,6 +126,7 @@ NSString *STNotificationLocalizedString(NSString *localizeString)
         
         UIScrollView *scrollView = UIScrollView.new;
         scrollView = scrollView;
+        scrollView.alwaysBounceHorizontal = NO;
         scrollView.backgroundColor = UIColor.blackColor;
         [self.view addSubview:scrollView];
         [scrollView mas_makeConstraints:^(MASConstraintMaker *make) {
