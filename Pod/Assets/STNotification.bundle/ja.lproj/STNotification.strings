@@ -1,0 +1,19 @@
+/* 
+  Localizable.strings
+  STNotification
+
+  Created by Akira Matsuda
+  Copyright (c) 2015 Akira Matsuda. All rights reserved.
+*/
+
+"notification.work"               = "設定方法:";
+"notification.notificationTap"    = "\"通知\"をタップする";
+"notification.open"               = "設定アプリを開く";
+"notification.app"                = "\"%@\"を選択";
+"notification.activate"           = "\"%@\"をオンにする";
+"notification.lockScreen"         = "ロック画面に表示";
+"notification.allowNotifications" = "通知を許可";
+"notification.chooseBanner"       = "\"バナー\"を選択";
+"notification.banner"             = "バナー";
+"notification.none"               = "なし";
+"notification.alert"              = "ダイアログ";
