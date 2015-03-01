@@ -1,3 +1,7 @@
+## 1.1.4
+
+* Add japanese support (thanks to Akira MATSUDA).
+
 ## 1.1.3
 
 * Add Catalan support.

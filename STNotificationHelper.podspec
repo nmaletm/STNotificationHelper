@@ -1,11 +1,11 @@
 
 Pod::Spec.new do |s|
   s.name             = "STNotificationHelper"
-  s.version          = "1.1.3"
+  s.version          = "1.1.4"
   s.summary          = "ViewController to describe the User how to turn on the Notifications on iOS7 and iOS8."
   s.description      = <<-DESC
                     ViewController to describe the User how to turn on the Notifications on iOS7 and iOS8.
-                    Supports languages ca, de, en, es, fr, id, it, pl, pt, ru, sv, zh-Hant.
+                    Supports languages ca, de, en, es, fr, id, it, ja, pl, pt, ru, sv, zh-Hant.
                     Origanally a fork of MHNotificationHelper (https://github.com/mariohahn/MHNotificationHelper/), but with iOS8 support and more languages.
                        DESC
   s.homepage         = "https://github.com/nmaletm/STNotificationHelper"

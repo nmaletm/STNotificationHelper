@@ -17,7 +17,7 @@ Steps with iOS7 (left), and steps with iOS8 (right)
 ## Language support
 
 ```
-ca, de, en, es, fr, id, it, pl, pt, ru, sv, zh-Hant, ja
+ca, de, en, es, fr, id, it, ja, pl, pt, ru, sv, zh-Hant
 ```
 
 If you want to contribute and translate to another language, make me a pull request or contacte me by [Twitter](https://twitter.com/NestorMalet) / [Email](http://www.nestor.cat/contact). I will answer asap.
@@ -77,7 +77,11 @@ STNotificationHelperViewController *notificationHelper = [STNotificationHelperVi
 
 * Mario Hahn, https://github.com/mariohahn (author of the original forked Pod)
 * Néstor Malet, http://www.nestor.cat
-* Retso Huang, https://github.com/retsohuang (traditional chinese support).
+
+## Translations
+
+* Traditional chinese: Retso Huang, https://github.com/retsohuang.
+* Japanese: Akira MATSUDA, https://github.com/0x0c.
 
 ## ChangeLog
 
