@@ -1,0 +1,19 @@
+/* 
+  Localizable.strings
+  STNotification
+
+  Created by Mario Hahn on 17.02.14.
+  Copyright (c) 2014 Mario Hahn. All rights reserved.
+*/
+
+"notification.work"               = "如何设置:";
+"notification.notificationTap"    = "点选 \"通知\"";
+"notification.open"               = "开启 iPhone 设置";
+"notification.app"                = "选择 \"%@\"";
+"notification.activate"           = "开启 \"%@\"";
+"notification.lockScreen"         = "在锁定屏幕中显示";
+"notification.allowNotifications" = "允许通知";
+"notification.chooseBanner"       = "选择 \"横幅\"";
+"notification.banner"             = "横幅";
+"notification.none"               = "无";
+"notification.alert"              = "提醒";
