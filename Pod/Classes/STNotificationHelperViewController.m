@@ -565,7 +565,7 @@ NSString *STNotificationLocalizedString(NSString *localizeString)
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
--(NSUInteger)supportedInterfaceOrientations{
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations{
     return UIInterfaceOrientationMaskPortrait;
 }
 

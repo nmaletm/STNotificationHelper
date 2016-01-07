@@ -1,3 +1,8 @@
+## 1.1.5
+
+* Add simplified chinese support (thanks to exherb).
+* Remove some warnings and verify iOS9 support.
+
 ## 1.1.4
 
 * Add japanese support (thanks to Akira MATSUDA).

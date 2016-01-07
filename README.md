@@ -6,13 +6,13 @@
 [![Platform](https://img.shields.io/cocoapods/p/STNotificationHelper.svg?style=flat)](http://cocoadocs.org/docsets/STNotificationHelper)
 
 
-Forked project from [MHNotificationHelper](https://github.com/mariohahn/MHNotificationHelper), with support for iOS8 (the instructions are different) and translation to some languages.
+Forked project from [MHNotificationHelper](https://github.com/mariohahn/MHNotificationHelper), with support for iOS8 and above (the instructions are different) and translation to some languages.
 
 
 ![Steps with iOS7](Screenshots/screenshote-ios7.png)
-![Steps with iOS8](Screenshots/screenshote-ios8.png)
+![Steps with iOS8/iOS9](Screenshots/screenshote-ios8.png)
 
-Steps with iOS7 (left), and steps with iOS8 (right)
+Steps with iOS7 (left), and steps with iOS8/iOS9 (right)
 
 ## Language support
 
