@@ -6,54 +6,12 @@
 #import "STNotificationHelperViewController.h"
 #import "Masonry.h"
 
-#define kSTNotificationBundleName @"STNotification.bundle"
-#define kSTNotificationBundleKey @"org.cocoapods.STNotificationHelper"
+#define kSTNotificationBundleName @"STNotification"
+#define kSTNotificationBundleIdentifier @"org.cocoapods.STNotificationHelper"
 
 #define kPaddingBetweenLabels 28
 #define kPaddingBetweenViews 10
 #define kPaddingImageView 5
-
-static NSString* (^ CustomLocalizationBlock)(NSString *localization) = nil;
-
-NSBundle *STNotificationBundle(void) {
-    static NSBundle *bundle = nil;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        NSString* path = [[[NSBundle bundleWithIdentifier:kSTNotificationBundleKey] resourcePath] stringByAppendingPathComponent:kSTNotificationBundleName];
-        bundle = [NSBundle bundleWithPath:path];
-    });
-    return bundle;
-}
-
-NSBundle *STNotificationImagesBundle(void) {
-    static NSBundle *bundle = nil;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        bundle = [NSBundle bundleWithIdentifier:kSTNotificationBundleKey];
-    });
-    return bundle;
-}
-
-void STNotificationCustomLocalizationBlock(NSString *(^customLocalizationBlock)(NSString *stringToLocalize)){
-    CustomLocalizationBlock = customLocalizationBlock;
-}
-NSString *STNotificationLocalizedString(NSString *localizeString)
-{
-    if (CustomLocalizationBlock) {
-        NSString *string = CustomLocalizationBlock(localizeString);
-        if (string) {
-            return string;
-        }
-    }
-    return  NSLocalizedStringFromTableInBundle(localizeString, @"STNotification", STNotificationBundle(), @"");
-}
-
-UIImage *STNotificationImage(NSString *name)
-{
-    UIImage *image = [UIImage imageNamed:name inBundle:STNotificationImagesBundle() compatibleWithTraitCollection:nil];
-    image = [image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
-    return image;
-}
 
 @implementation STNotificationHelperObject
 
@@ -85,7 +43,7 @@ UIImage *STNotificationImage(NSString *name)
 {
     UIImage *appIcon = [UIImage imageNamed: [[[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleIconFiles"] objectAtIndex:0]];
     NSString *appName = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleDisplayName"];
-
+    
     return [self.class.alloc initWithTitle:title description:notificationDescription appIcon:appIcon appName:appName];
 }
 
@@ -163,7 +121,7 @@ UIImage *STNotificationImage(NSString *name)
         exitButton.tintColor = UIColor.lightGrayColor;
         exitButton.layer.cornerRadius = 35;
         exitButton.backgroundColor = UIColor.blackColor;
-        [exitButton setImage:STNotificationImage(@"STExit") forState:UIControlStateNormal];
+        [exitButton setImage:[self imageFromName:@"STExit"] forState:UIControlStateNormal];
         [self.view addSubview:exitButton];
         
         [exitButton mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -202,7 +160,7 @@ UIImage *STNotificationImage(NSString *name)
         
         UILabel *doesItWorkLabel = UILabel.new;
         doesItWorkLabel.textColor = UIColor.whiteColor;
-        doesItWorkLabel.text = STNotificationLocalizedString(@"notification.work");
+        doesItWorkLabel.text = [self localizedStringForKey:@"notification.work"];
         [doesItWorkLabel setAdjustsFontSizeToFitWidth:YES];
         doesItWorkLabel.font = [UIFont boldSystemFontOfSize:15];
         [contentView addSubview:doesItWorkLabel];
@@ -221,17 +179,17 @@ UIImage *STNotificationImage(NSString *name)
             currentStep = [self addOpenSettingsAtPosition:currentPositionStep++ insertUnder:currentStep];
             currentStep = [self addTapNotificationCenterAtPosition:currentPositionStep++ insertUnder:currentStep];
             currentStep = [self addSelectYourAppAtPosition:currentPositionStep++ withNotification:notification insertUnder:currentStep];
-
+            
         } else {
             currentStep = [self addGoToSettingsAtPosition:currentPositionStep++ insertUnder:currentStep];
             currentStep = [self addTapNotificationCenterAtPosition:currentPositionStep++ insertUnder:currentStep];
             currentStep = [self addTurnOnAllowNotifications:currentPositionStep++ insertUnder:currentStep];
-
+            
         }
-
+        
         currentStep = [self addTurnOnLockScreen:currentPositionStep++ insertUnder:currentStep];
         currentStep = [self addSelectionTypeAtPosition:currentPositionStep++ insertUnder:currentStep];
-   
+        
         [contentView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.bottom.mas_equalTo(currentStep.mas_bottom).with.offset(kPaddingBetweenViews);
         }];
@@ -243,9 +201,7 @@ UIImage *STNotificationImage(NSString *name)
 
 -(UIView *)addTapStep:(NSString *)step withIcon:(NSString*)icon atPosition:(NSInteger)position insertUnder:(UIView *)currentStep
 {
-    UIImage *image = STNotificationImage(icon);
-    image = [image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
-
+    UIImage *image = [self imageFromName:icon];
     return [self addTapStep:step withImage:image atPosition:position insertUnder:currentStep];
 }
 
@@ -253,7 +209,7 @@ UIImage *STNotificationImage(NSString *name)
 {
     
     
-    return [self addTapStep:STNotificationLocalizedString(@"notification.open")
+    return [self addTapStep:[self localizedStringForKey:@"notification.open"]
                    withIcon:@"STSettings"
                  atPosition:position
                 insertUnder:currentStep];
@@ -262,7 +218,7 @@ UIImage *STNotificationImage(NSString *name)
 - (UIView *)addTapNotificationCenterAtPosition:(NSInteger)position insertUnder:(UIView *)currentStep
 {
     
-    return [self addTapStep:STNotificationLocalizedString(@"notification.notificationTap")
+    return [self addTapStep:[self localizedStringForKey:@"notification.notificationTap"]
                    withIcon:@"STNotification"
                  atPosition:position
                 insertUnder:currentStep];
@@ -295,7 +251,7 @@ UIImage *STNotificationImage(NSString *name)
     }];
     
     UIButton *goToSettingsButton = UIButton.new;
-    [goToSettingsButton setTitle:STNotificationLocalizedString(@"notification.open") forState:UIControlStateNormal];
+    [goToSettingsButton setTitle:[self localizedStringForKey:@"notification.open"] forState:UIControlStateNormal];
     [goToSettingsButton setTitleColor:UIColor.blackColor forState:UIControlStateNormal];
     [goToSettingsButton addTarget:self action:@selector(goToSettings) forControlEvents:UIControlEventTouchUpInside];
     [goToSettingsButton.titleLabel setFont:[UIFont boldSystemFontOfSize:15]];
@@ -314,7 +270,7 @@ UIImage *STNotificationImage(NSString *name)
 - (UIView *)addSelectYourAppAtPosition:(NSInteger)position withNotification:(STNotificationHelperObject*)notification insertUnder:(UIView *)currentStep
 {
     
-    return [self addTapStep:[NSString stringWithFormat: STNotificationLocalizedString(@"notification.app"), notification.appName]
+    return [self addTapStep:[NSString stringWithFormat: [self localizedStringForKey:@"notification.app"], notification.appName]
                   withImage:notification.appIcon
                  atPosition:position
                 insertUnder:currentStep];
@@ -332,7 +288,7 @@ UIImage *STNotificationImage(NSString *name)
         make.top.mas_equalTo(currentStep.mas_bottom).with.offset(kPaddingBetweenLabels);
     }];
     [self numberAppearanceForLables:@[numberLabel]];
-
+    
     UIImageView *numberImageView = UIImageView.new;
     numberImageView.image = image;
     [contentView addSubview:numberImageView];
@@ -367,16 +323,16 @@ UIImage *STNotificationImage(NSString *name)
 - (UIView *)addTurnOnLockScreen:(NSInteger)position insertUnder:(UIView *)currentStep
 {
     
-    return [self addSwitchStep:STNotificationLocalizedString(@"notification.lockScreen")
-                 atPosition:position
-                insertUnder:currentStep];
+    return [self addSwitchStep:[self localizedStringForKey:@"notification.lockScreen"]
+                    atPosition:position
+                   insertUnder:currentStep];
 }
 
 
 - (UIView *)addTurnOnAllowNotifications:(NSInteger)position insertUnder:(UIView *)currentStep
 {
     
-    return [self addSwitchStep:STNotificationLocalizedString(@"notification.allowNotifications")
+    return [self addSwitchStep:[self localizedStringForKey:@"notification.allowNotifications"]
                     atPosition:position
                    insertUnder:currentStep];
 }
@@ -397,7 +353,7 @@ UIImage *STNotificationImage(NSString *name)
     
     UILabel *descriptionLabel = UILabel.new;
     descriptionLabel.textColor = UIColor.whiteColor;
-    descriptionLabel.text = [NSString stringWithFormat:STNotificationLocalizedString(@"notification.activate"),step];
+    descriptionLabel.text = [NSString stringWithFormat:[self localizedStringForKey:@"notification.activate"], step];
     descriptionLabel.numberOfLines = 2;
     descriptionLabel.font = [UIFont boldSystemFontOfSize:15];
     [contentView addSubview:descriptionLabel];
@@ -443,7 +399,7 @@ UIImage *STNotificationImage(NSString *name)
         make.centerY.mas_equalTo(descriptionView.mas_centerY);
         make.size.mas_equalTo(CGSizeMake(45, 21));
     }];
-
+    
     
     return descriptionView;
 }
@@ -464,7 +420,7 @@ UIImage *STNotificationImage(NSString *name)
     
     UILabel *descriptionLabel = UILabel.new;
     descriptionLabel.textColor = UIColor.whiteColor;
-    descriptionLabel.text = STNotificationLocalizedString(@"notification.chooseBanner");
+    descriptionLabel.text = [self localizedStringForKey:@"notification.chooseBanner"];
     descriptionLabel.numberOfLines = 2;
     descriptionLabel.font = [UIFont boldSystemFontOfSize:15];
     [contentView addSubview:descriptionLabel];
@@ -492,7 +448,7 @@ UIImage *STNotificationImage(NSString *name)
     
     UILabel *noneLabel = UILabel.new;
     noneLabel.textColor = UIColor.lightGrayColor;
-    noneLabel.text = STNotificationLocalizedString(@"notification.none");
+    noneLabel.text = [self localizedStringForKey:@"notification.none"];
     [noneLabel setAdjustsFontSizeToFitWidth:YES];
     noneLabel.font = [UIFont boldSystemFontOfSize:15];
     noneLabel.textAlignment = NSTextAlignmentCenter;
@@ -503,7 +459,7 @@ UIImage *STNotificationImage(NSString *name)
     bannerLabel.clipsToBounds = YES;
     bannerLabel.layer.cornerRadius = 8;
     bannerLabel.textColor = UIColor.blackColor;
-    bannerLabel.text = STNotificationLocalizedString(@"notification.banner");
+    bannerLabel.text = [self localizedStringForKey:@"notification.banner"];
     [bannerLabel setAdjustsFontSizeToFitWidth:YES];
     bannerLabel.font = [UIFont boldSystemFontOfSize:15];
     bannerLabel.textAlignment = NSTextAlignmentCenter;
@@ -511,7 +467,7 @@ UIImage *STNotificationImage(NSString *name)
     
     UILabel *hinweisLabel = UILabel.new;
     hinweisLabel.textColor = UIColor.lightGrayColor;
-    hinweisLabel.text = STNotificationLocalizedString(@"notification.alert");
+    hinweisLabel.text = [self localizedStringForKey:@"notification.alert"];
     [hinweisLabel setAdjustsFontSizeToFitWidth:YES];
     hinweisLabel.font = [UIFont boldSystemFontOfSize:15];
     hinweisLabel.textAlignment = NSTextAlignmentCenter;
@@ -556,7 +512,7 @@ UIImage *STNotificationImage(NSString *name)
         imageView.clipsToBounds = YES;
         imageView.contentMode = UIViewContentModeCenter;
         if (imageView.image.size.width > 28 &&
-             imageView.image.size.height > 28) {
+            imageView.image.size.height > 28) {
             
             imageView.contentMode = UIViewContentModeScaleAspectFill;
         }
@@ -592,6 +548,29 @@ UIImage *STNotificationImage(NSString *name)
 
 -(UIInterfaceOrientation)preferredInterfaceOrientationForPresentation{
     return UIInterfaceOrientationPortrait;
+}
+
+#pragma mark - NSBundle
+
+- (NSString *)bundlePath {
+    return [[NSBundle bundleForClass:[self class]] pathForResource:kSTNotificationBundleName ofType:@"bundle"];
+}
+
+- (UIImage *) imageFromName:(NSString *)name
+{
+    UIImage *image = [UIImage imageNamed:name];
+    if (image == nil) {
+        NSBundle *bundle = [NSBundle bundleWithIdentifier:kSTNotificationBundleIdentifier];
+        image = [UIImage imageNamed:name inBundle:bundle compatibleWithTraitCollection:nil];
+    }
+    image = [image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+    return image;
+}
+
+- (NSString *)localizedStringForKey:(NSString *)stringKey {
+    NSBundle *bundle = [NSBundle bundleWithPath:[self bundlePath]];
+    NSString *localizedString = [bundle localizedStringForKey:stringKey value:stringKey table:kSTNotificationBundleName];
+    return localizedString;
 }
 
 #pragma mark - iOS versions control
