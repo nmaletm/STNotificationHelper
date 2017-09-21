@@ -7,6 +7,7 @@
 #import "Masonry.h"
 
 #define kSTNotificationBundleName @"STNotification.bundle"
+#define kSTNotificationBundleKey @"org.cocoapods.STNotificationHelper"
 
 #define kPaddingBetweenLabels 28
 #define kPaddingBetweenViews 10
@@ -18,8 +19,17 @@ NSBundle *STNotificationBundle(void) {
     static NSBundle *bundle = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        NSString* path = [NSBundle.mainBundle.resourcePath stringByAppendingPathComponent:kSTNotificationBundleName];
+        NSString* path = [[[NSBundle bundleWithIdentifier:kSTNotificationBundleKey] resourcePath] stringByAppendingPathComponent:kSTNotificationBundleName];
         bundle = [NSBundle bundleWithPath:path];
+    });
+    return bundle;
+}
+
+NSBundle *STNotificationImagesBundle(void) {
+    static NSBundle *bundle = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        bundle = [NSBundle bundleWithIdentifier:kSTNotificationBundleKey];
     });
     return bundle;
 }
@@ -36,6 +46,13 @@ NSString *STNotificationLocalizedString(NSString *localizeString)
         }
     }
     return  NSLocalizedStringFromTableInBundle(localizeString, @"STNotification", STNotificationBundle(), @"");
+}
+
+UIImage *STNotificationImage(NSString *name)
+{
+    UIImage *image = [UIImage imageNamed:name inBundle:STNotificationImagesBundle() compatibleWithTraitCollection:nil];
+    image = [image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+    return image;
 }
 
 @implementation STNotificationHelperObject
@@ -146,7 +163,7 @@ NSString *STNotificationLocalizedString(NSString *localizeString)
         exitButton.tintColor = UIColor.lightGrayColor;
         exitButton.layer.cornerRadius = 35;
         exitButton.backgroundColor = UIColor.blackColor;
-        [exitButton setImage:[[UIImage imageNamed:@"STExit"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
+        [exitButton setImage:STNotificationImage(@"STExit") forState:UIControlStateNormal];
         [self.view addSubview:exitButton];
         
         [exitButton mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -226,7 +243,7 @@ NSString *STNotificationLocalizedString(NSString *localizeString)
 
 -(UIView *)addTapStep:(NSString *)step withIcon:(NSString*)icon atPosition:(NSInteger)position insertUnder:(UIView *)currentStep
 {
-    UIImage *image = [UIImage imageNamed:icon];
+    UIImage *image = STNotificationImage(icon);
     image = [image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
 
     return [self addTapStep:step withImage:image atPosition:position insertUnder:currentStep];
