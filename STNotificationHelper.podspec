@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "STNotificationHelper"
-  s.version          = "1.1.5"
+  s.version          = "1.2.0"
   s.summary          = "ViewController to describe the User how to turn on the Notifications on iOS7 and above."
   s.description      = <<-DESC
                     ViewController to describe the User how to turn on the Notifications on iOS7 and above.
